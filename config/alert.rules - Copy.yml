@@ -1,0 +1,19 @@
+groups:
+  - name: alert.rules
+    rules:
+      - alert: PoolVMDown
+        expr: vm_health_ssh_status == 0
+        for: 1m
+        annotations:
+          title: "Server Pool VM {{ $labels.ipaddr }} SSH Failed"
+          description: "{{ $labels.ipaddr }} SSH failed with error: {{ $labels.ssh_error }}."
+        labels:
+          severity: "critical"
+      - alert: PoolVMHighDiskUsage
+        expr: disk_usage &gt;= 95
+        for: 1m
+        annotations:
+          title: "Server Pool VM {{ $labels.ipaddr }} high disk usage"
+          description: "{{ $labels.ipaddr }} has disk usage of {{ $value }}%"
+        labels:
+          severity: "critical"

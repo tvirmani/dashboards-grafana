@@ -1,0 +1,2002 @@
+2023-06-23 10:01:56,832 Registered metrics collection for available_vms
+2023-06-23 10:01:56,833 Registered metrics collection for memory_usage
+2023-06-23 10:01:56,833 Registered metrics collection for disk_usage
+2023-06-23 10:01:56,833 Registered metrics collection for cpu_load_avg_5mins
+2023-06-23 10:01:56,834 Registered metrics collection for vm_health_ssh_status
+2023-06-23 10:01:56,839  * Debugger is active!
+2023-06-23 10:01:56,840  * Debugger PIN: 262-082-426
+2023-06-23 10:02:39,004 --Test--
+2023-06-23 10:02:39,006 ----Details Started----
+2023-06-23 10:02:39,007 static_vms
+2023-06-23 10:02:39,007 {'host': 'localhost', 'username': 'Administrator', 'password': 'password'}
+2023-06-23 10:02:39,008 ----Details Ended----
+2023-06-23 10:02:39,009 --Connecting to Below Cluster with Hard Coded---
+2023-06-23 10:02:39,123 --Bucket Set---
+2023-06-23 10:02:42,105 --Query Set---
+2023-06-23 10:02:42,124 Found row: {'pool': 'regression'}
+2023-06-23 10:02:42,124 Found row: {'pool': 'regression'}
+2023-06-23 10:02:42,124 Found row: {'pool': 'magnareg'}
+2023-06-23 10:02:42,125 Found row: {'pool': '12hrreg'}
+2023-06-23 10:02:42,125 Found row: {'pool': '12hrreg'}
+2023-06-23 10:02:42,125 Found row: {'pool': '12hrreg'}
+2023-06-23 10:02:42,125 Found row: {'pool': '12hrreg'}
+2023-06-23 10:02:42,126 Found row: {'pool': '12hrreg'}
+2023-06-23 10:02:42,126 Found row: {'pool': 'magnareg'}
+2023-06-23 10:02:42,126 Found row: {'pool': 'magnareg'}
+2023-06-23 10:02:42,127 Connected to localhost
+2023-06-23 10:02:42,127 Collecting metrics for available_vms
+2023-06-23 10:02:42,127 Found Cluster in Options
+2023-06-23 10:02:42,128 Cluster Name static_vms
+2023-06-23 10:02:42,128 Query Name SELECT poolId as `pool`, COUNT(*) AS count FROM (SELECT poolId FROM `tarun`.`my_scope`.`collection1` WHERE IS_ARRAY(poolId)=FALSE and state='available' UNION ALL SELECT poolId FROM `tarun`.`my_scope`.`collection1` UNNEST poolId where `collection1`.state = 'available'  ) AS pools group by poolId
+2023-06-23 10:02:42,138 Label is ['pool="regression"']
+2023-06-23 10:02:42,138 Label is ['pool="magnareg"']
+2023-06-23 10:02:42,138 Label is ['pool="12hrreg"']
+2023-06-23 10:02:42,139 Collecting metrics for memory_usage
+2023-06-23 10:02:42,139 Found CSV in Options
+2023-06-23 10:02:42,139 Collecting metrics for disk_usage
+2023-06-23 10:02:42,139 Found CSV in Options
+2023-06-23 10:02:42,140 Collecting metrics for cpu_load_avg_5mins
+2023-06-23 10:02:42,140 Found CSV in Options
+2023-06-23 10:02:42,140 Collecting metrics for vm_health_ssh_status
+2023-06-23 10:02:42,140 Found CSV in Options
+2023-06-23 10:02:42,142 172.16.238.13 - - [23/Jun/2023 10:02:42] "GET /metrics HTTP/1.1" 200 -
+2023-06-23 10:03:39,002 --Test--
+2023-06-23 10:03:39,004 ----Details Started----
+2023-06-23 10:03:39,004 static_vms
+2023-06-23 10:03:39,005 {'host': 'localhost', 'username': 'Administrator', 'password': 'password'}
+2023-06-23 10:03:39,006 ----Details Ended----
+2023-06-23 10:03:39,007 --Connecting to Below Cluster with Hard Coded---
+2023-06-23 10:03:39,077 --Bucket Set---
+2023-06-23 10:03:39,079 --Query Set---
+2023-06-23 10:03:39,084 Found row: {'pool': 'regression'}
+2023-06-23 10:03:39,085 Found row: {'pool': 'regression'}
+2023-06-23 10:03:39,085 Found row: {'pool': 'magnareg'}
+2023-06-23 10:03:39,085 Found row: {'pool': '12hrreg'}
+2023-06-23 10:03:39,085 Found row: {'pool': '12hrreg'}
+2023-06-23 10:03:39,086 Found row: {'pool': '12hrreg'}
+2023-06-23 10:03:39,086 Found row: {'pool': '12hrreg'}
+2023-06-23 10:03:39,086 Found row: {'pool': '12hrreg'}
+2023-06-23 10:03:39,086 Found row: {'pool': 'magnareg'}
+2023-06-23 10:03:39,086 Found row: {'pool': 'magnareg'}
+2023-06-23 10:03:39,087 Connected to localhost
+2023-06-23 10:03:39,087 Collecting metrics for available_vms
+2023-06-23 10:03:39,087 Found Cluster in Options
+2023-06-23 10:03:39,087 Cluster Name static_vms
+2023-06-23 10:03:39,088 Query Name SELECT poolId as `pool`, COUNT(*) AS count FROM (SELECT poolId FROM `tarun`.`my_scope`.`collection1` WHERE IS_ARRAY(poolId)=FALSE and state='available' UNION ALL SELECT poolId FROM `tarun`.`my_scope`.`collection1` UNNEST poolId where `collection1`.state = 'available'  ) AS pools group by poolId
+2023-06-23 10:03:39,095 Label is ['pool="regression"']
+2023-06-23 10:03:39,096 Label is ['pool="magnareg"']
+2023-06-23 10:03:39,096 Label is ['pool="12hrreg"']
+2023-06-23 10:03:39,096 Collecting metrics for memory_usage
+2023-06-23 10:03:39,096 Found CSV in Options
+2023-06-23 10:03:39,097 Collecting metrics for disk_usage
+2023-06-23 10:03:39,097 Found CSV in Options
+2023-06-23 10:03:39,097 Collecting metrics for cpu_load_avg_5mins
+2023-06-23 10:03:39,097 Found CSV in Options
+2023-06-23 10:03:39,098 Collecting metrics for vm_health_ssh_status
+2023-06-23 10:03:39,098 Found CSV in Options
+2023-06-23 10:03:39,099 172.16.238.13 - - [23/Jun/2023 10:03:39] "GET /metrics HTTP/1.1" 200 -
+2023-06-23 10:04:39,003 --Test--
+2023-06-23 10:04:39,005 ----Details Started----
+2023-06-23 10:04:39,006 static_vms
+2023-06-23 10:04:39,006 {'host': 'localhost', 'username': 'Administrator', 'password': 'password'}
+2023-06-23 10:04:39,007 ----Details Ended----
+2023-06-23 10:04:39,008 --Connecting to Below Cluster with Hard Coded---
+2023-06-23 10:04:39,087 --Bucket Set---
+2023-06-23 10:04:39,089 --Query Set---
+2023-06-23 10:04:39,095 Found row: {'pool': 'regression'}
+2023-06-23 10:04:39,096 Found row: {'pool': 'regression'}
+2023-06-23 10:04:39,096 Found row: {'pool': 'magnareg'}
+2023-06-23 10:04:39,096 Found row: {'pool': '12hrreg'}
+2023-06-23 10:04:39,097 Found row: {'pool': '12hrreg'}
+2023-06-23 10:04:39,097 Found row: {'pool': '12hrreg'}
+2023-06-23 10:04:39,097 Found row: {'pool': '12hrreg'}
+2023-06-23 10:04:39,098 Found row: {'pool': '12hrreg'}
+2023-06-23 10:04:39,098 Found row: {'pool': 'magnareg'}
+2023-06-23 10:04:39,098 Found row: {'pool': 'magnareg'}
+2023-06-23 10:04:39,099 Connected to localhost
+2023-06-23 10:04:39,099 Collecting metrics for available_vms
+2023-06-23 10:04:39,100 Found Cluster in Options
+2023-06-23 10:04:39,100 Cluster Name static_vms
+2023-06-23 10:04:39,100 Query Name SELECT poolId as `pool`, COUNT(*) AS count FROM (SELECT poolId FROM `tarun`.`my_scope`.`collection1` WHERE IS_ARRAY(poolId)=FALSE and state='available' UNION ALL SELECT poolId FROM `tarun`.`my_scope`.`collection1` UNNEST poolId where `collection1`.state = 'available'  ) AS pools group by poolId
+2023-06-23 10:04:39,110 Label is ['pool="regression"']
+2023-06-23 10:04:39,111 Label is ['pool="magnareg"']
+2023-06-23 10:04:39,111 Label is ['pool="12hrreg"']
+2023-06-23 10:04:39,112 Collecting metrics for memory_usage
+2023-06-23 10:04:39,112 Found CSV in Options
+2023-06-23 10:04:39,113 Collecting metrics for disk_usage
+2023-06-23 10:04:39,113 Found CSV in Options
+2023-06-23 10:04:39,114 Collecting metrics for cpu_load_avg_5mins
+2023-06-23 10:04:39,115 Found CSV in Options
+2023-06-23 10:04:39,115 Collecting metrics for vm_health_ssh_status
+2023-06-23 10:04:39,116 Found CSV in Options
+2023-06-23 10:04:39,118 172.16.238.13 - - [23/Jun/2023 10:04:39] "GET /metrics HTTP/1.1" 200 -
+2023-06-23 10:05:39,000 --Test--
+2023-06-23 10:05:39,001 ----Details Started----
+2023-06-23 10:05:39,001 static_vms
+2023-06-23 10:05:39,002 {'host': 'localhost', 'username': 'Administrator', 'password': 'password'}
+2023-06-23 10:05:39,002 ----Details Ended----
+2023-06-23 10:05:39,003 --Connecting to Below Cluster with Hard Coded---
+2023-06-23 10:05:39,055 --Bucket Set---
+2023-06-23 10:05:39,057 --Query Set---
+2023-06-23 10:05:39,062 Found row: {'pool': 'regression'}
+2023-06-23 10:05:39,063 Found row: {'pool': 'regression'}
+2023-06-23 10:05:39,063 Found row: {'pool': 'magnareg'}
+2023-06-23 10:05:39,063 Found row: {'pool': '12hrreg'}
+2023-06-23 10:05:39,063 Found row: {'pool': '12hrreg'}
+2023-06-23 10:05:39,064 Found row: {'pool': '12hrreg'}
+2023-06-23 10:05:39,064 Found row: {'pool': '12hrreg'}
+2023-06-23 10:05:39,064 Found row: {'pool': '12hrreg'}
+2023-06-23 10:05:39,064 Found row: {'pool': 'magnareg'}
+2023-06-23 10:05:39,065 Found row: {'pool': 'magnareg'}
+2023-06-23 10:05:39,065 Connected to localhost
+2023-06-23 10:05:39,065 Collecting metrics for available_vms
+2023-06-23 10:05:39,065 Found Cluster in Options
+2023-06-23 10:05:39,066 Cluster Name static_vms
+2023-06-23 10:05:39,066 Query Name SELECT poolId as `pool`, COUNT(*) AS count FROM (SELECT poolId FROM `tarun`.`my_scope`.`collection1` WHERE IS_ARRAY(poolId)=FALSE and state='available' UNION ALL SELECT poolId FROM `tarun`.`my_scope`.`collection1` UNNEST poolId where `collection1`.state = 'available'  ) AS pools group by poolId
+2023-06-23 10:05:39,074 Label is ['pool="magnareg"']
+2023-06-23 10:05:39,074 Label is ['pool="12hrreg"']
+2023-06-23 10:05:39,074 Label is ['pool="regression"']
+2023-06-23 10:05:39,074 Collecting metrics for memory_usage
+2023-06-23 10:05:39,075 Found CSV in Options
+2023-06-23 10:05:39,075 Collecting metrics for disk_usage
+2023-06-23 10:05:39,075 Found CSV in Options
+2023-06-23 10:05:39,076 Collecting metrics for cpu_load_avg_5mins
+2023-06-23 10:05:39,076 Found CSV in Options
+2023-06-23 10:05:39,076 Collecting metrics for vm_health_ssh_status
+2023-06-23 10:05:39,076 Found CSV in Options
+2023-06-23 10:05:39,078 172.16.238.13 - - [23/Jun/2023 10:05:39] "GET /metrics HTTP/1.1" 200 -
+2023-06-23 10:06:39,000 --Test--
+2023-06-23 10:06:39,000 ----Details Started----
+2023-06-23 10:06:39,000 static_vms
+2023-06-23 10:06:39,001 {'host': 'localhost', 'username': 'Administrator', 'password': 'password'}
+2023-06-23 10:06:39,001 ----Details Ended----
+2023-06-23 10:06:39,002 --Connecting to Below Cluster with Hard Coded---
+2023-06-23 10:06:39,044 --Bucket Set---
+2023-06-23 10:06:39,046 --Query Set---
+2023-06-23 10:06:39,053 Found row: {'pool': 'regression'}
+2023-06-23 10:06:39,053 Found row: {'pool': 'regression'}
+2023-06-23 10:06:39,054 Found row: {'pool': 'magnareg'}
+2023-06-23 10:06:39,054 Found row: {'pool': '12hrreg'}
+2023-06-23 10:06:39,054 Found row: {'pool': '12hrreg'}
+2023-06-23 10:06:39,055 Found row: {'pool': '12hrreg'}
+2023-06-23 10:06:39,055 Found row: {'pool': '12hrreg'}
+2023-06-23 10:06:39,055 Found row: {'pool': '12hrreg'}
+2023-06-23 10:06:39,056 Found row: {'pool': 'magnareg'}
+2023-06-23 10:06:39,056 Found row: {'pool': 'magnareg'}
+2023-06-23 10:06:39,056 Connected to localhost
+2023-06-23 10:06:39,056 Collecting metrics for available_vms
+2023-06-23 10:06:39,056 Found Cluster in Options
+2023-06-23 10:06:39,057 Cluster Name static_vms
+2023-06-23 10:06:39,057 Query Name SELECT poolId as `pool`, COUNT(*) AS count FROM (SELECT poolId FROM `tarun`.`my_scope`.`collection1` WHERE IS_ARRAY(poolId)=FALSE and state='available' UNION ALL SELECT poolId FROM `tarun`.`my_scope`.`collection1` UNNEST poolId where `collection1`.state = 'available'  ) AS pools group by poolId
+2023-06-23 10:06:39,065 Label is ['pool="magnareg"']
+2023-06-23 10:06:39,065 Label is ['pool="12hrreg"']
+2023-06-23 10:06:39,065 Label is ['pool="regression"']
+2023-06-23 10:06:39,066 Collecting metrics for memory_usage
+2023-06-23 10:06:39,066 Found CSV in Options
+2023-06-23 10:06:39,066 Collecting metrics for disk_usage
+2023-06-23 10:06:39,066 Found CSV in Options
+2023-06-23 10:06:39,067 Collecting metrics for cpu_load_avg_5mins
+2023-06-23 10:06:39,067 Found CSV in Options
+2023-06-23 10:06:39,067 Collecting metrics for vm_health_ssh_status
+2023-06-23 10:06:39,067 Found CSV in Options
+2023-06-23 10:06:39,068 172.16.238.13 - - [23/Jun/2023 10:06:39] "GET /metrics HTTP/1.1" 200 -
+2023-06-23 10:07:39,002 --Test--
+2023-06-23 10:07:39,004 ----Details Started----
+2023-06-23 10:07:39,005 static_vms
+2023-06-23 10:07:39,006 {'host': 'localhost', 'username': 'Administrator', 'password': 'password'}
+2023-06-23 10:07:39,007 ----Details Ended----
+2023-06-23 10:07:39,007 --Connecting to Below Cluster with Hard Coded---
+2023-06-23 10:07:39,067 --Bucket Set---
+2023-06-23 10:07:39,068 --Query Set---
+2023-06-23 10:07:39,073 Found row: {'pool': 'regression'}
+2023-06-23 10:07:39,074 Found row: {'pool': 'regression'}
+2023-06-23 10:07:39,074 Found row: {'pool': 'magnareg'}
+2023-06-23 10:07:39,074 Found row: {'pool': '12hrreg'}
+2023-06-23 10:07:39,074 Found row: {'pool': '12hrreg'}
+2023-06-23 10:07:39,075 Found row: {'pool': '12hrreg'}
+2023-06-23 10:07:39,075 Found row: {'pool': '12hrreg'}
+2023-06-23 10:07:39,075 Found row: {'pool': '12hrreg'}
+2023-06-23 10:07:39,075 Found row: {'pool': 'magnareg'}
+2023-06-23 10:07:39,076 Found row: {'pool': 'magnareg'}
+2023-06-23 10:07:39,076 Connected to localhost
+2023-06-23 10:07:39,076 Collecting metrics for available_vms
+2023-06-23 10:07:39,076 Found Cluster in Options
+2023-06-23 10:07:39,077 Cluster Name static_vms
+2023-06-23 10:07:39,077 Query Name SELECT poolId as `pool`, COUNT(*) AS count FROM (SELECT poolId FROM `tarun`.`my_scope`.`collection1` WHERE IS_ARRAY(poolId)=FALSE and state='available' UNION ALL SELECT poolId FROM `tarun`.`my_scope`.`collection1` UNNEST poolId where `collection1`.state = 'available'  ) AS pools group by poolId
+2023-06-23 10:07:39,086 Label is ['pool="regression"']
+2023-06-23 10:07:39,087 Label is ['pool="magnareg"']
+2023-06-23 10:07:39,087 Label is ['pool="12hrreg"']
+2023-06-23 10:07:39,087 Collecting metrics for memory_usage
+2023-06-23 10:07:39,088 Found CSV in Options
+2023-06-23 10:07:39,088 Collecting metrics for disk_usage
+2023-06-23 10:07:39,088 Found CSV in Options
+2023-06-23 10:07:39,089 Collecting metrics for cpu_load_avg_5mins
+2023-06-23 10:07:39,089 Found CSV in Options
+2023-06-23 10:07:39,089 Collecting metrics for vm_health_ssh_status
+2023-06-23 10:07:39,089 Found CSV in Options
+2023-06-23 10:07:39,091 172.16.238.13 - - [23/Jun/2023 10:07:39] "GET /metrics HTTP/1.1" 200 -
+2023-06-23 10:08:39,003 --Test--
+2023-06-23 10:08:39,004 ----Details Started----
+2023-06-23 10:08:39,005 static_vms
+2023-06-23 10:08:39,005 {'host': 'localhost', 'username': 'Administrator', 'password': 'password'}
+2023-06-23 10:08:39,006 ----Details Ended----
+2023-06-23 10:08:39,007 --Connecting to Below Cluster with Hard Coded---
+2023-06-23 10:08:39,073 --Bucket Set---
+2023-06-23 10:08:39,075 --Query Set---
+2023-06-23 10:08:39,083 Found row: {'pool': 'regression'}
+2023-06-23 10:08:39,083 Found row: {'pool': 'regression'}
+2023-06-23 10:08:39,083 Found row: {'pool': 'magnareg'}
+2023-06-23 10:08:39,084 Found row: {'pool': '12hrreg'}
+2023-06-23 10:08:39,084 Found row: {'pool': '12hrreg'}
+2023-06-23 10:08:39,084 Found row: {'pool': '12hrreg'}
+2023-06-23 10:08:39,084 Found row: {'pool': '12hrreg'}
+2023-06-23 10:08:39,084 Found row: {'pool': '12hrreg'}
+2023-06-23 10:08:39,085 Found row: {'pool': 'magnareg'}
+2023-06-23 10:08:39,085 Found row: {'pool': 'magnareg'}
+2023-06-23 10:08:39,085 Connected to localhost
+2023-06-23 10:08:39,085 Collecting metrics for available_vms
+2023-06-23 10:08:39,085 Found Cluster in Options
+2023-06-23 10:08:39,086 Cluster Name static_vms
+2023-06-23 10:08:39,086 Query Name SELECT poolId as `pool`, COUNT(*) AS count FROM (SELECT poolId FROM `tarun`.`my_scope`.`collection1` WHERE IS_ARRAY(poolId)=FALSE and state='available' UNION ALL SELECT poolId FROM `tarun`.`my_scope`.`collection1` UNNEST poolId where `collection1`.state = 'available'  ) AS pools group by poolId
+2023-06-23 10:08:39,093 Label is ['pool="12hrreg"']
+2023-06-23 10:08:39,093 Label is ['pool="regression"']
+2023-06-23 10:08:39,094 Label is ['pool="magnareg"']
+2023-06-23 10:08:39,094 Collecting metrics for memory_usage
+2023-06-23 10:08:39,094 Found CSV in Options
+2023-06-23 10:08:39,094 Collecting metrics for disk_usage
+2023-06-23 10:08:39,095 Found CSV in Options
+2023-06-23 10:08:39,095 Collecting metrics for cpu_load_avg_5mins
+2023-06-23 10:08:39,095 Found CSV in Options
+2023-06-23 10:08:39,095 Collecting metrics for vm_health_ssh_status
+2023-06-23 10:08:39,096 Found CSV in Options
+2023-06-23 10:08:39,097 172.16.238.13 - - [23/Jun/2023 10:08:39] "GET /metrics HTTP/1.1" 200 -
+2023-06-23 10:09:39,002 --Test--
+2023-06-23 10:09:39,003 ----Details Started----
+2023-06-23 10:09:39,004 static_vms
+2023-06-23 10:09:39,005 {'host': 'localhost', 'username': 'Administrator', 'password': 'password'}
+2023-06-23 10:09:39,006 ----Details Ended----
+2023-06-23 10:09:39,007 --Connecting to Below Cluster with Hard Coded---
+2023-06-23 10:09:39,073 --Bucket Set---
+2023-06-23 10:09:39,076 --Query Set---
+2023-06-23 10:09:39,082 Found row: {'pool': 'regression'}
+2023-06-23 10:09:39,083 Found row: {'pool': 'regression'}
+2023-06-23 10:09:39,083 Found row: {'pool': 'magnareg'}
+2023-06-23 10:09:39,083 Found row: {'pool': '12hrreg'}
+2023-06-23 10:09:39,084 Found row: {'pool': '12hrreg'}
+2023-06-23 10:09:39,084 Found row: {'pool': '12hrreg'}
+2023-06-23 10:09:39,084 Found row: {'pool': '12hrreg'}
+2023-06-23 10:09:39,085 Found row: {'pool': '12hrreg'}
+2023-06-23 10:09:39,085 Found row: {'pool': 'magnareg'}
+2023-06-23 10:09:39,086 Found row: {'pool': 'magnareg'}
+2023-06-23 10:09:39,086 Connected to localhost
+2023-06-23 10:09:39,086 Collecting metrics for available_vms
+2023-06-23 10:09:39,087 Found Cluster in Options
+2023-06-23 10:09:39,087 Cluster Name static_vms
+2023-06-23 10:09:39,087 Query Name SELECT poolId as `pool`, COUNT(*) AS count FROM (SELECT poolId FROM `tarun`.`my_scope`.`collection1` WHERE IS_ARRAY(poolId)=FALSE and state='available' UNION ALL SELECT poolId FROM `tarun`.`my_scope`.`collection1` UNNEST poolId where `collection1`.state = 'available'  ) AS pools group by poolId
+2023-06-23 10:09:39,096 Label is ['pool="12hrreg"']
+2023-06-23 10:09:39,096 Label is ['pool="regression"']
+2023-06-23 10:09:39,096 Label is ['pool="magnareg"']
+2023-06-23 10:09:39,097 Collecting metrics for memory_usage
+2023-06-23 10:09:39,097 Found CSV in Options
+2023-06-23 10:09:39,097 Collecting metrics for disk_usage
+2023-06-23 10:09:39,098 Found CSV in Options
+2023-06-23 10:09:39,098 Collecting metrics for cpu_load_avg_5mins
+2023-06-23 10:09:39,098 Found CSV in Options
+2023-06-23 10:09:39,099 Collecting metrics for vm_health_ssh_status
+2023-06-23 10:09:39,099 Found CSV in Options
+2023-06-23 10:09:39,100 172.16.238.13 - - [23/Jun/2023 10:09:39] "GET /metrics HTTP/1.1" 200 -
+2023-06-23 10:10:38,999 --Test--
+2023-06-23 10:10:38,999 ----Details Started----
+2023-06-23 10:10:38,999 static_vms
+2023-06-23 10:10:39,000 {'host': 'localhost', 'username': 'Administrator', 'password': 'password'}
+2023-06-23 10:10:39,000 ----Details Ended----
+2023-06-23 10:10:39,000 --Connecting to Below Cluster with Hard Coded---
+2023-06-23 10:10:39,057 --Bucket Set---
+2023-06-23 10:10:39,060 --Query Set---
+2023-06-23 10:10:39,065 Found row: {'pool': 'regression'}
+2023-06-23 10:10:39,066 Found row: {'pool': 'regression'}
+2023-06-23 10:10:39,066 Found row: {'pool': 'magnareg'}
+2023-06-23 10:10:39,066 Found row: {'pool': '12hrreg'}
+2023-06-23 10:10:39,066 Found row: {'pool': '12hrreg'}
+2023-06-23 10:10:39,067 Found row: {'pool': '12hrreg'}
+2023-06-23 10:10:39,067 Found row: {'pool': '12hrreg'}
+2023-06-23 10:10:39,067 Found row: {'pool': '12hrreg'}
+2023-06-23 10:10:39,067 Found row: {'pool': 'magnareg'}
+2023-06-23 10:10:39,067 Found row: {'pool': 'magnareg'}
+2023-06-23 10:10:39,068 Connected to localhost
+2023-06-23 10:10:39,068 Collecting metrics for available_vms
+2023-06-23 10:10:39,068 Found Cluster in Options
+2023-06-23 10:10:39,068 Cluster Name static_vms
+2023-06-23 10:10:39,069 Query Name SELECT poolId as `pool`, COUNT(*) AS count FROM (SELECT poolId FROM `tarun`.`my_scope`.`collection1` WHERE IS_ARRAY(poolId)=FALSE and state='available' UNION ALL SELECT poolId FROM `tarun`.`my_scope`.`collection1` UNNEST poolId where `collection1`.state = 'available'  ) AS pools group by poolId
+2023-06-23 10:10:39,075 Label is ['pool="magnareg"']
+2023-06-23 10:10:39,076 Label is ['pool="12hrreg"']
+2023-06-23 10:10:39,076 Label is ['pool="regression"']
+2023-06-23 10:10:39,076 Collecting metrics for memory_usage
+2023-06-23 10:10:39,076 Found CSV in Options
+2023-06-23 10:10:39,077 Collecting metrics for disk_usage
+2023-06-23 10:10:39,077 Found CSV in Options
+2023-06-23 10:10:39,077 Collecting metrics for cpu_load_avg_5mins
+2023-06-23 10:10:39,077 Found CSV in Options
+2023-06-23 10:10:39,078 Collecting metrics for vm_health_ssh_status
+2023-06-23 10:10:39,078 Found CSV in Options
+2023-06-23 10:10:39,079 172.16.238.13 - - [23/Jun/2023 10:10:39] "GET /metrics HTTP/1.1" 200 -
+2023-06-23 10:11:38,999 --Test--
+2023-06-23 10:11:38,999 ----Details Started----
+2023-06-23 10:11:38,999 static_vms
+2023-06-23 10:11:39,000 {'host': 'localhost', 'username': 'Administrator', 'password': 'password'}
+2023-06-23 10:11:39,000 ----Details Ended----
+2023-06-23 10:11:39,000 --Connecting to Below Cluster with Hard Coded---
+2023-06-23 10:11:39,035 --Bucket Set---
+2023-06-23 10:11:39,037 --Query Set---
+2023-06-23 10:11:39,044 Found row: {'pool': 'regression'}
+2023-06-23 10:11:39,044 Found row: {'pool': 'regression'}
+2023-06-23 10:11:39,044 Found row: {'pool': 'magnareg'}
+2023-06-23 10:11:39,044 Found row: {'pool': '12hrreg'}
+2023-06-23 10:11:39,045 Found row: {'pool': '12hrreg'}
+2023-06-23 10:11:39,045 Found row: {'pool': '12hrreg'}
+2023-06-23 10:11:39,045 Found row: {'pool': '12hrreg'}
+2023-06-23 10:11:39,045 Found row: {'pool': '12hrreg'}
+2023-06-23 10:11:39,045 Found row: {'pool': 'magnareg'}
+2023-06-23 10:11:39,046 Found row: {'pool': 'magnareg'}
+2023-06-23 10:11:39,046 Connected to localhost
+2023-06-23 10:11:39,046 Collecting metrics for available_vms
+2023-06-23 10:11:39,046 Found Cluster in Options
+2023-06-23 10:11:39,046 Cluster Name static_vms
+2023-06-23 10:11:39,047 Query Name SELECT poolId as `pool`, COUNT(*) AS count FROM (SELECT poolId FROM `tarun`.`my_scope`.`collection1` WHERE IS_ARRAY(poolId)=FALSE and state='available' UNION ALL SELECT poolId FROM `tarun`.`my_scope`.`collection1` UNNEST poolId where `collection1`.state = 'available'  ) AS pools group by poolId
+2023-06-23 10:11:39,054 Label is ['pool="12hrreg"']
+2023-06-23 10:11:39,054 Label is ['pool="regression"']
+2023-06-23 10:11:39,054 Label is ['pool="magnareg"']
+2023-06-23 10:11:39,054 Collecting metrics for memory_usage
+2023-06-23 10:11:39,055 Found CSV in Options
+2023-06-23 10:11:39,055 Collecting metrics for disk_usage
+2023-06-23 10:11:39,055 Found CSV in Options
+2023-06-23 10:11:39,056 Collecting metrics for cpu_load_avg_5mins
+2023-06-23 10:11:39,056 Found CSV in Options
+2023-06-23 10:11:39,056 Collecting metrics for vm_health_ssh_status
+2023-06-23 10:11:39,056 Found CSV in Options
+2023-06-23 10:11:39,057 172.16.238.13 - - [23/Jun/2023 10:11:39] "GET /metrics HTTP/1.1" 200 -
+2023-06-23 10:12:39,003 --Test--
+2023-06-23 10:12:39,006 ----Details Started----
+2023-06-23 10:12:39,008 static_vms
+2023-06-23 10:12:39,010 {'host': 'localhost', 'username': 'Administrator', 'password': 'password'}
+2023-06-23 10:12:39,012 ----Details Ended----
+2023-06-23 10:12:39,013 --Connecting to Below Cluster with Hard Coded---
+2023-06-23 10:12:39,077 --Bucket Set---
+2023-06-23 10:12:39,079 --Query Set---
+2023-06-23 10:12:39,084 Found row: {'pool': 'regression'}
+2023-06-23 10:12:39,084 Found row: {'pool': 'regression'}
+2023-06-23 10:12:39,085 Found row: {'pool': 'magnareg'}
+2023-06-23 10:12:39,085 Found row: {'pool': '12hrreg'}
+2023-06-23 10:12:39,085 Found row: {'pool': '12hrreg'}
+2023-06-23 10:12:39,085 Found row: {'pool': '12hrreg'}
+2023-06-23 10:12:39,086 Found row: {'pool': '12hrreg'}
+2023-06-23 10:12:39,086 Found row: {'pool': '12hrreg'}
+2023-06-23 10:12:39,086 Found row: {'pool': 'magnareg'}
+2023-06-23 10:12:39,087 Found row: {'pool': 'magnareg'}
+2023-06-23 10:12:39,087 Connected to localhost
+2023-06-23 10:12:39,087 Collecting metrics for available_vms
+2023-06-23 10:12:39,087 Found Cluster in Options
+2023-06-23 10:12:39,088 Cluster Name static_vms
+2023-06-23 10:12:39,088 Query Name SELECT poolId as `pool`, COUNT(*) AS count FROM (SELECT poolId FROM `tarun`.`my_scope`.`collection1` WHERE IS_ARRAY(poolId)=FALSE and state='available' UNION ALL SELECT poolId FROM `tarun`.`my_scope`.`collection1` UNNEST poolId where `collection1`.state = 'available'  ) AS pools group by poolId
+2023-06-23 10:12:39,096 Label is ['pool="regression"']
+2023-06-23 10:12:39,096 Label is ['pool="magnareg"']
+2023-06-23 10:12:39,096 Label is ['pool="12hrreg"']
+2023-06-23 10:12:39,097 Collecting metrics for memory_usage
+2023-06-23 10:12:39,097 Found CSV in Options
+2023-06-23 10:12:39,097 Collecting metrics for disk_usage
+2023-06-23 10:12:39,097 Found CSV in Options
+2023-06-23 10:12:39,098 Collecting metrics for cpu_load_avg_5mins
+2023-06-23 10:12:39,098 Found CSV in Options
+2023-06-23 10:12:39,098 Collecting metrics for vm_health_ssh_status
+2023-06-23 10:12:39,098 Found CSV in Options
+2023-06-23 10:12:39,100 172.16.238.13 - - [23/Jun/2023 10:12:39] "GET /metrics HTTP/1.1" 200 -
+2023-06-23 10:13:38,999 --Test--
+2023-06-23 10:13:39,000 ----Details Started----
+2023-06-23 10:13:39,000 static_vms
+2023-06-23 10:13:39,001 {'host': 'localhost', 'username': 'Administrator', 'password': 'password'}
+2023-06-23 10:13:39,001 ----Details Ended----
+2023-06-23 10:13:39,001 --Connecting to Below Cluster with Hard Coded---
+2023-06-23 10:13:39,042 --Bucket Set---
+2023-06-23 10:13:39,044 --Query Set---
+2023-06-23 10:13:39,055 Found row: {'pool': 'regression'}
+2023-06-23 10:13:39,055 Found row: {'pool': 'regression'}
+2023-06-23 10:13:39,056 Found row: {'pool': 'magnareg'}
+2023-06-23 10:13:39,057 Found row: {'pool': '12hrreg'}
+2023-06-23 10:13:39,057 Found row: {'pool': '12hrreg'}
+2023-06-23 10:13:39,058 Found row: {'pool': '12hrreg'}
+2023-06-23 10:13:39,058 Found row: {'pool': '12hrreg'}
+2023-06-23 10:13:39,058 Found row: {'pool': '12hrreg'}
+2023-06-23 10:13:39,059 Found row: {'pool': 'magnareg'}
+2023-06-23 10:13:39,059 Found row: {'pool': 'magnareg'}
+2023-06-23 10:13:39,059 Connected to localhost
+2023-06-23 10:13:39,060 Collecting metrics for available_vms
+2023-06-23 10:13:39,060 Found Cluster in Options
+2023-06-23 10:13:39,061 Cluster Name static_vms
+2023-06-23 10:13:39,061 Query Name SELECT poolId as `pool`, COUNT(*) AS count FROM (SELECT poolId FROM `tarun`.`my_scope`.`collection1` WHERE IS_ARRAY(poolId)=FALSE and state='available' UNION ALL SELECT poolId FROM `tarun`.`my_scope`.`collection1` UNNEST poolId where `collection1`.state = 'available'  ) AS pools group by poolId
+2023-06-23 10:13:39,074 Label is ['pool="magnareg"']
+2023-06-23 10:13:39,074 Label is ['pool="12hrreg"']
+2023-06-23 10:13:39,074 Label is ['pool="regression"']
+2023-06-23 10:13:39,075 Collecting metrics for memory_usage
+2023-06-23 10:13:39,075 Found CSV in Options
+2023-06-23 10:13:39,075 Collecting metrics for disk_usage
+2023-06-23 10:13:39,076 Found CSV in Options
+2023-06-23 10:13:39,076 Collecting metrics for cpu_load_avg_5mins
+2023-06-23 10:13:39,076 Found CSV in Options
+2023-06-23 10:13:39,076 Collecting metrics for vm_health_ssh_status
+2023-06-23 10:13:39,077 Found CSV in Options
+2023-06-23 10:13:39,078 172.16.238.13 - - [23/Jun/2023 10:13:39] "GET /metrics HTTP/1.1" 200 -
+2023-06-23 10:14:39,002 --Test--
+2023-06-23 10:14:39,003 ----Details Started----
+2023-06-23 10:14:39,004 static_vms
+2023-06-23 10:14:39,005 {'host': 'localhost', 'username': 'Administrator', 'password': 'password'}
+2023-06-23 10:14:39,006 ----Details Ended----
+2023-06-23 10:14:39,007 --Connecting to Below Cluster with Hard Coded---
+2023-06-23 10:14:39,070 --Bucket Set---
+2023-06-23 10:14:39,072 --Query Set---
+2023-06-23 10:14:39,078 Found row: {'pool': 'regression'}
+2023-06-23 10:14:39,079 Found row: {'pool': 'regression'}
+2023-06-23 10:14:39,079 Found row: {'pool': 'magnareg'}
+2023-06-23 10:14:39,079 Found row: {'pool': '12hrreg'}
+2023-06-23 10:14:39,080 Found row: {'pool': '12hrreg'}
+2023-06-23 10:14:39,080 Found row: {'pool': '12hrreg'}
+2023-06-23 10:14:39,080 Found row: {'pool': '12hrreg'}
+2023-06-23 10:14:39,081 Found row: {'pool': '12hrreg'}
+2023-06-23 10:14:39,081 Found row: {'pool': 'magnareg'}
+2023-06-23 10:14:39,081 Found row: {'pool': 'magnareg'}
+2023-06-23 10:14:39,081 Connected to localhost
+2023-06-23 10:14:39,082 Collecting metrics for available_vms
+2023-06-23 10:14:39,082 Found Cluster in Options
+2023-06-23 10:14:39,082 Cluster Name static_vms
+2023-06-23 10:14:39,083 Query Name SELECT poolId as `pool`, COUNT(*) AS count FROM (SELECT poolId FROM `tarun`.`my_scope`.`collection1` WHERE IS_ARRAY(poolId)=FALSE and state='available' UNION ALL SELECT poolId FROM `tarun`.`my_scope`.`collection1` UNNEST poolId where `collection1`.state = 'available'  ) AS pools group by poolId
+2023-06-23 10:14:39,092 Label is ['pool="regression"']
+2023-06-23 10:14:39,092 Label is ['pool="magnareg"']
+2023-06-23 10:14:39,093 Label is ['pool="12hrreg"']
+2023-06-23 10:14:39,093 Collecting metrics for memory_usage
+2023-06-23 10:14:39,093 Found CSV in Options
+2023-06-23 10:14:39,094 Collecting metrics for disk_usage
+2023-06-23 10:14:39,094 Found CSV in Options
+2023-06-23 10:14:39,095 Collecting metrics for cpu_load_avg_5mins
+2023-06-23 10:14:39,095 Found CSV in Options
+2023-06-23 10:14:39,095 Collecting metrics for vm_health_ssh_status
+2023-06-23 10:14:39,095 Found CSV in Options
+2023-06-23 10:14:39,097 172.16.238.13 - - [23/Jun/2023 10:14:39] "GET /metrics HTTP/1.1" 200 -
+2023-06-23 10:15:39,001 --Test--
+2023-06-23 10:15:39,002 ----Details Started----
+2023-06-23 10:15:39,003 static_vms
+2023-06-23 10:15:39,004 {'host': 'localhost', 'username': 'Administrator', 'password': 'password'}
+2023-06-23 10:15:39,005 ----Details Ended----
+2023-06-23 10:15:39,006 --Connecting to Below Cluster with Hard Coded---
+2023-06-23 10:15:39,065 --Bucket Set---
+2023-06-23 10:15:39,067 --Query Set---
+2023-06-23 10:15:39,073 Found row: {'pool': 'regression'}
+2023-06-23 10:15:39,073 Found row: {'pool': 'regression'}
+2023-06-23 10:15:39,074 Found row: {'pool': 'magnareg'}
+2023-06-23 10:15:39,074 Found row: {'pool': '12hrreg'}
+2023-06-23 10:15:39,075 Found row: {'pool': '12hrreg'}
+2023-06-23 10:15:39,075 Found row: {'pool': '12hrreg'}
+2023-06-23 10:15:39,075 Found row: {'pool': '12hrreg'}
+2023-06-23 10:15:39,076 Found row: {'pool': '12hrreg'}
+2023-06-23 10:15:39,076 Found row: {'pool': 'magnareg'}
+2023-06-23 10:15:39,076 Found row: {'pool': 'magnareg'}
+2023-06-23 10:15:39,077 Connected to localhost
+2023-06-23 10:15:39,077 Collecting metrics for available_vms
+2023-06-23 10:15:39,077 Found Cluster in Options
+2023-06-23 10:15:39,078 Cluster Name static_vms
+2023-06-23 10:15:39,078 Query Name SELECT poolId as `pool`, COUNT(*) AS count FROM (SELECT poolId FROM `tarun`.`my_scope`.`collection1` WHERE IS_ARRAY(poolId)=FALSE and state='available' UNION ALL SELECT poolId FROM `tarun`.`my_scope`.`collection1` UNNEST poolId where `collection1`.state = 'available'  ) AS pools group by poolId
+2023-06-23 10:15:39,086 Label is ['pool="regression"']
+2023-06-23 10:15:39,086 Label is ['pool="magnareg"']
+2023-06-23 10:15:39,087 Label is ['pool="12hrreg"']
+2023-06-23 10:15:39,087 Collecting metrics for memory_usage
+2023-06-23 10:15:39,087 Found CSV in Options
+2023-06-23 10:15:39,087 Collecting metrics for disk_usage
+2023-06-23 10:15:39,087 Found CSV in Options
+2023-06-23 10:15:39,088 Collecting metrics for cpu_load_avg_5mins
+2023-06-23 10:15:39,088 Found CSV in Options
+2023-06-23 10:15:39,088 Collecting metrics for vm_health_ssh_status
+2023-06-23 10:15:39,088 Found CSV in Options
+2023-06-23 10:15:39,090 172.16.238.13 - - [23/Jun/2023 10:15:39] "GET /metrics HTTP/1.1" 200 -
+2023-06-23 10:16:39,002 --Test--
+2023-06-23 10:16:39,003 ----Details Started----
+2023-06-23 10:16:39,004 static_vms
+2023-06-23 10:16:39,005 {'host': 'localhost', 'username': 'Administrator', 'password': 'password'}
+2023-06-23 10:16:39,006 ----Details Ended----
+2023-06-23 10:16:39,007 --Connecting to Below Cluster with Hard Coded---
+2023-06-23 10:16:39,060 --Bucket Set---
+2023-06-23 10:16:39,062 --Query Set---
+2023-06-23 10:16:39,068 Found row: {'pool': 'regression'}
+2023-06-23 10:16:39,068 Found row: {'pool': 'regression'}
+2023-06-23 10:16:39,068 Found row: {'pool': 'magnareg'}
+2023-06-23 10:16:39,069 Found row: {'pool': '12hrreg'}
+2023-06-23 10:16:39,069 Found row: {'pool': '12hrreg'}
+2023-06-23 10:16:39,069 Found row: {'pool': '12hrreg'}
+2023-06-23 10:16:39,070 Found row: {'pool': '12hrreg'}
+2023-06-23 10:16:39,070 Found row: {'pool': '12hrreg'}
+2023-06-23 10:16:39,070 Found row: {'pool': 'magnareg'}
+2023-06-23 10:16:39,071 Found row: {'pool': 'magnareg'}
+2023-06-23 10:16:39,071 Connected to localhost
+2023-06-23 10:16:39,071 Collecting metrics for available_vms
+2023-06-23 10:16:39,072 Found Cluster in Options
+2023-06-23 10:16:39,072 Cluster Name static_vms
+2023-06-23 10:16:39,073 Query Name SELECT poolId as `pool`, COUNT(*) AS count FROM (SELECT poolId FROM `tarun`.`my_scope`.`collection1` WHERE IS_ARRAY(poolId)=FALSE and state='available' UNION ALL SELECT poolId FROM `tarun`.`my_scope`.`collection1` UNNEST poolId where `collection1`.state = 'available'  ) AS pools group by poolId
+2023-06-23 10:16:39,081 Label is ['pool="regression"']
+2023-06-23 10:16:39,082 Label is ['pool="magnareg"']
+2023-06-23 10:16:39,082 Label is ['pool="12hrreg"']
+2023-06-23 10:16:39,082 Collecting metrics for memory_usage
+2023-06-23 10:16:39,083 Found CSV in Options
+2023-06-23 10:16:39,083 Collecting metrics for disk_usage
+2023-06-23 10:16:39,083 Found CSV in Options
+2023-06-23 10:16:39,084 Collecting metrics for cpu_load_avg_5mins
+2023-06-23 10:16:39,084 Found CSV in Options
+2023-06-23 10:16:39,084 Collecting metrics for vm_health_ssh_status
+2023-06-23 10:16:39,085 Found CSV in Options
+2023-06-23 10:16:39,086 172.16.238.13 - - [23/Jun/2023 10:16:39] "GET /metrics HTTP/1.1" 200 -
+2023-06-23 10:17:38,990 --Test--
+2023-06-23 10:17:38,991 ----Details Started----
+2023-06-23 10:17:38,992 static_vms
+2023-06-23 10:17:38,993 {'host': 'localhost', 'username': 'Administrator', 'password': 'password'}
+2023-06-23 10:17:38,994 ----Details Ended----
+2023-06-23 10:17:38,995 --Connecting to Below Cluster with Hard Coded---
+2023-06-23 10:17:39,053 --Bucket Set---
+2023-06-23 10:17:39,056 --Query Set---
+2023-06-23 10:17:39,066 Found row: {'pool': 'regression'}
+2023-06-23 10:17:39,066 Found row: {'pool': 'regression'}
+2023-06-23 10:17:39,067 Found row: {'pool': 'magnareg'}
+2023-06-23 10:17:39,067 Found row: {'pool': '12hrreg'}
+2023-06-23 10:17:39,068 Found row: {'pool': '12hrreg'}
+2023-06-23 10:17:39,068 Found row: {'pool': '12hrreg'}
+2023-06-23 10:17:39,069 Found row: {'pool': '12hrreg'}
+2023-06-23 10:17:39,070 Found row: {'pool': '12hrreg'}
+2023-06-23 10:17:39,070 Found row: {'pool': 'magnareg'}
+2023-06-23 10:17:39,071 Found row: {'pool': 'magnareg'}
+2023-06-23 10:17:39,071 Connected to localhost
+2023-06-23 10:17:39,071 Collecting metrics for available_vms
+2023-06-23 10:17:39,071 Found Cluster in Options
+2023-06-23 10:17:39,072 Cluster Name static_vms
+2023-06-23 10:17:39,072 Query Name SELECT poolId as `pool`, COUNT(*) AS count FROM (SELECT poolId FROM `tarun`.`my_scope`.`collection1` WHERE IS_ARRAY(poolId)=FALSE and state='available' UNION ALL SELECT poolId FROM `tarun`.`my_scope`.`collection1` UNNEST poolId where `collection1`.state = 'available'  ) AS pools group by poolId
+2023-06-23 10:17:39,079 Label is ['pool="12hrreg"']
+2023-06-23 10:17:39,079 Label is ['pool="regression"']
+2023-06-23 10:17:39,079 Label is ['pool="magnareg"']
+2023-06-23 10:17:39,079 Collecting metrics for memory_usage
+2023-06-23 10:17:39,080 Found CSV in Options
+2023-06-23 10:17:39,080 Collecting metrics for disk_usage
+2023-06-23 10:17:39,080 Found CSV in Options
+2023-06-23 10:17:39,081 Collecting metrics for cpu_load_avg_5mins
+2023-06-23 10:17:39,081 Found CSV in Options
+2023-06-23 10:17:39,081 Collecting metrics for vm_health_ssh_status
+2023-06-23 10:17:39,081 Found CSV in Options
+2023-06-23 10:17:39,083 172.16.238.13 - - [23/Jun/2023 10:17:39] "GET /metrics HTTP/1.1" 200 -
+2023-06-23 10:18:38,999 --Test--
+2023-06-23 10:18:38,999 ----Details Started----
+2023-06-23 10:18:39,000 static_vms
+2023-06-23 10:18:39,000 {'host': 'localhost', 'username': 'Administrator', 'password': 'password'}
+2023-06-23 10:18:39,000 ----Details Ended----
+2023-06-23 10:18:39,001 --Connecting to Below Cluster with Hard Coded---
+2023-06-23 10:18:39,037 --Bucket Set---
+2023-06-23 10:18:39,039 --Query Set---
+2023-06-23 10:18:39,046 Found row: {'pool': 'regression'}
+2023-06-23 10:18:39,046 Found row: {'pool': 'regression'}
+2023-06-23 10:18:39,046 Found row: {'pool': 'magnareg'}
+2023-06-23 10:18:39,047 Found row: {'pool': '12hrreg'}
+2023-06-23 10:18:39,047 Found row: {'pool': '12hrreg'}
+2023-06-23 10:18:39,048 Found row: {'pool': '12hrreg'}
+2023-06-23 10:18:39,048 Found row: {'pool': '12hrreg'}
+2023-06-23 10:18:39,048 Found row: {'pool': '12hrreg'}
+2023-06-23 10:18:39,049 Found row: {'pool': 'magnareg'}
+2023-06-23 10:18:39,049 Found row: {'pool': 'magnareg'}
+2023-06-23 10:18:39,049 Connected to localhost
+2023-06-23 10:18:39,049 Collecting metrics for available_vms
+2023-06-23 10:18:39,050 Found Cluster in Options
+2023-06-23 10:18:39,050 Cluster Name static_vms
+2023-06-23 10:18:39,050 Query Name SELECT poolId as `pool`, COUNT(*) AS count FROM (SELECT poolId FROM `tarun`.`my_scope`.`collection1` WHERE IS_ARRAY(poolId)=FALSE and state='available' UNION ALL SELECT poolId FROM `tarun`.`my_scope`.`collection1` UNNEST poolId where `collection1`.state = 'available'  ) AS pools group by poolId
+2023-06-23 10:18:39,059 Label is ['pool="12hrreg"']
+2023-06-23 10:18:39,059 Label is ['pool="regression"']
+2023-06-23 10:18:39,060 Label is ['pool="magnareg"']
+2023-06-23 10:18:39,060 Collecting metrics for memory_usage
+2023-06-23 10:18:39,060 Found CSV in Options
+2023-06-23 10:18:39,061 Collecting metrics for disk_usage
+2023-06-23 10:18:39,061 Found CSV in Options
+2023-06-23 10:18:39,061 Collecting metrics for cpu_load_avg_5mins
+2023-06-23 10:18:39,062 Found CSV in Options
+2023-06-23 10:18:39,062 Collecting metrics for vm_health_ssh_status
+2023-06-23 10:18:39,062 Found CSV in Options
+2023-06-23 10:18:39,064 172.16.238.13 - - [23/Jun/2023 10:18:39] "GET /metrics HTTP/1.1" 200 -
+2023-06-23 10:19:38,999 --Test--
+2023-06-23 10:19:38,999 ----Details Started----
+2023-06-23 10:19:39,000 static_vms
+2023-06-23 10:19:39,000 {'host': 'localhost', 'username': 'Administrator', 'password': 'password'}
+2023-06-23 10:19:39,000 ----Details Ended----
+2023-06-23 10:19:39,001 --Connecting to Below Cluster with Hard Coded---
+2023-06-23 10:19:39,039 --Bucket Set---
+2023-06-23 10:19:39,042 --Query Set---
+2023-06-23 10:19:39,048 Found row: {'pool': 'regression'}
+2023-06-23 10:19:39,048 Found row: {'pool': 'regression'}
+2023-06-23 10:19:39,049 Found row: {'pool': 'magnareg'}
+2023-06-23 10:19:39,049 Found row: {'pool': '12hrreg'}
+2023-06-23 10:19:39,049 Found row: {'pool': '12hrreg'}
+2023-06-23 10:19:39,050 Found row: {'pool': '12hrreg'}
+2023-06-23 10:19:39,050 Found row: {'pool': '12hrreg'}
+2023-06-23 10:19:39,050 Found row: {'pool': '12hrreg'}
+2023-06-23 10:19:39,051 Found row: {'pool': 'magnareg'}
+2023-06-23 10:19:39,051 Found row: {'pool': 'magnareg'}
+2023-06-23 10:19:39,051 Connected to localhost
+2023-06-23 10:19:39,051 Collecting metrics for available_vms
+2023-06-23 10:19:39,052 Found Cluster in Options
+2023-06-23 10:19:39,052 Cluster Name static_vms
+2023-06-23 10:19:39,052 Query Name SELECT poolId as `pool`, COUNT(*) AS count FROM (SELECT poolId FROM `tarun`.`my_scope`.`collection1` WHERE IS_ARRAY(poolId)=FALSE and state='available' UNION ALL SELECT poolId FROM `tarun`.`my_scope`.`collection1` UNNEST poolId where `collection1`.state = 'available'  ) AS pools group by poolId
+2023-06-23 10:19:39,059 Label is ['pool="magnareg"']
+2023-06-23 10:19:39,060 Label is ['pool="12hrreg"']
+2023-06-23 10:19:39,060 Label is ['pool="regression"']
+2023-06-23 10:19:39,060 Collecting metrics for memory_usage
+2023-06-23 10:19:39,060 Found CSV in Options
+2023-06-23 10:19:39,061 Collecting metrics for disk_usage
+2023-06-23 10:19:39,061 Found CSV in Options
+2023-06-23 10:19:39,061 Collecting metrics for cpu_load_avg_5mins
+2023-06-23 10:19:39,061 Found CSV in Options
+2023-06-23 10:19:39,062 Collecting metrics for vm_health_ssh_status
+2023-06-23 10:19:39,062 Found CSV in Options
+2023-06-23 10:19:39,063 172.16.238.13 - - [23/Jun/2023 10:19:39] "GET /metrics HTTP/1.1" 200 -
+2023-06-23 10:20:38,999 --Test--
+2023-06-23 10:20:39,000 ----Details Started----
+2023-06-23 10:20:39,000 static_vms
+2023-06-23 10:20:39,001 {'host': 'localhost', 'username': 'Administrator', 'password': 'password'}
+2023-06-23 10:20:39,001 ----Details Ended----
+2023-06-23 10:20:39,001 --Connecting to Below Cluster with Hard Coded---
+2023-06-23 10:20:39,036 --Bucket Set---
+2023-06-23 10:20:39,038 --Query Set---
+2023-06-23 10:20:39,044 Found row: {'pool': 'regression'}
+2023-06-23 10:20:39,044 Found row: {'pool': 'regression'}
+2023-06-23 10:20:39,045 Found row: {'pool': 'magnareg'}
+2023-06-23 10:20:39,045 Found row: {'pool': '12hrreg'}
+2023-06-23 10:20:39,046 Found row: {'pool': '12hrreg'}
+2023-06-23 10:20:39,046 Found row: {'pool': '12hrreg'}
+2023-06-23 10:20:39,046 Found row: {'pool': '12hrreg'}
+2023-06-23 10:20:39,047 Found row: {'pool': '12hrreg'}
+2023-06-23 10:20:39,047 Found row: {'pool': 'magnareg'}
+2023-06-23 10:20:39,047 Found row: {'pool': 'magnareg'}
+2023-06-23 10:20:39,047 Connected to localhost
+2023-06-23 10:20:39,048 Collecting metrics for available_vms
+2023-06-23 10:20:39,048 Found Cluster in Options
+2023-06-23 10:20:39,048 Cluster Name static_vms
+2023-06-23 10:20:39,049 Query Name SELECT poolId as `pool`, COUNT(*) AS count FROM (SELECT poolId FROM `tarun`.`my_scope`.`collection1` WHERE IS_ARRAY(poolId)=FALSE and state='available' UNION ALL SELECT poolId FROM `tarun`.`my_scope`.`collection1` UNNEST poolId where `collection1`.state = 'available'  ) AS pools group by poolId
+2023-06-23 10:20:39,055 Label is ['pool="12hrreg"']
+2023-06-23 10:20:39,056 Label is ['pool="regression"']
+2023-06-23 10:20:39,056 Label is ['pool="magnareg"']
+2023-06-23 10:20:39,056 Collecting metrics for memory_usage
+2023-06-23 10:20:39,056 Found CSV in Options
+2023-06-23 10:20:39,057 Collecting metrics for disk_usage
+2023-06-23 10:20:39,057 Found CSV in Options
+2023-06-23 10:20:39,057 Collecting metrics for cpu_load_avg_5mins
+2023-06-23 10:20:39,057 Found CSV in Options
+2023-06-23 10:20:39,058 Collecting metrics for vm_health_ssh_status
+2023-06-23 10:20:39,058 Found CSV in Options
+2023-06-23 10:20:39,059 172.16.238.13 - - [23/Jun/2023 10:20:39] "GET /metrics HTTP/1.1" 200 -
+2023-06-23 10:21:38,999 --Test--
+2023-06-23 10:21:39,000 ----Details Started----
+2023-06-23 10:21:39,000 static_vms
+2023-06-23 10:21:39,000 {'host': 'localhost', 'username': 'Administrator', 'password': 'password'}
+2023-06-23 10:21:39,001 ----Details Ended----
+2023-06-23 10:21:39,001 --Connecting to Below Cluster with Hard Coded---
+2023-06-23 10:21:39,151 --Bucket Set---
+2023-06-23 10:21:39,153 --Query Set---
+2023-06-23 10:21:39,163 Found row: {'pool': 'regression'}
+2023-06-23 10:21:39,163 Found row: {'pool': 'regression'}
+2023-06-23 10:21:39,163 Found row: {'pool': 'magnareg'}
+2023-06-23 10:21:39,163 Found row: {'pool': '12hrreg'}
+2023-06-23 10:21:39,164 Found row: {'pool': '12hrreg'}
+2023-06-23 10:21:39,164 Found row: {'pool': '12hrreg'}
+2023-06-23 10:21:39,164 Found row: {'pool': '12hrreg'}
+2023-06-23 10:21:39,164 Found row: {'pool': '12hrreg'}
+2023-06-23 10:21:39,165 Found row: {'pool': 'magnareg'}
+2023-06-23 10:21:39,165 Found row: {'pool': 'magnareg'}
+2023-06-23 10:21:39,165 Connected to localhost
+2023-06-23 10:21:39,165 Collecting metrics for available_vms
+2023-06-23 10:21:39,165 Found Cluster in Options
+2023-06-23 10:21:39,166 Cluster Name static_vms
+2023-06-23 10:21:39,166 Query Name SELECT poolId as `pool`, COUNT(*) AS count FROM (SELECT poolId FROM `tarun`.`my_scope`.`collection1` WHERE IS_ARRAY(poolId)=FALSE and state='available' UNION ALL SELECT poolId FROM `tarun`.`my_scope`.`collection1` UNNEST poolId where `collection1`.state = 'available'  ) AS pools group by poolId
+2023-06-23 10:21:39,172 Label is ['pool="magnareg"']
+2023-06-23 10:21:39,173 Label is ['pool="12hrreg"']
+2023-06-23 10:21:39,173 Label is ['pool="regression"']
+2023-06-23 10:21:39,173 Collecting metrics for memory_usage
+2023-06-23 10:21:39,173 Found CSV in Options
+2023-06-23 10:21:39,174 Collecting metrics for disk_usage
+2023-06-23 10:21:39,174 Found CSV in Options
+2023-06-23 10:21:39,174 Collecting metrics for cpu_load_avg_5mins
+2023-06-23 10:21:39,174 Found CSV in Options
+2023-06-23 10:21:39,175 Collecting metrics for vm_health_ssh_status
+2023-06-23 10:21:39,175 Found CSV in Options
+2023-06-23 10:21:39,176 172.16.238.13 - - [23/Jun/2023 10:21:39] "GET /metrics HTTP/1.1" 200 -
+2023-06-23 10:22:39,000 --Test--
+2023-06-23 10:22:39,000 ----Details Started----
+2023-06-23 10:22:39,001 static_vms
+2023-06-23 10:22:39,001 {'host': 'localhost', 'username': 'Administrator', 'password': 'password'}
+2023-06-23 10:22:39,001 ----Details Ended----
+2023-06-23 10:22:39,002 --Connecting to Below Cluster with Hard Coded---
+2023-06-23 10:22:39,063 --Bucket Set---
+2023-06-23 10:22:39,065 --Query Set---
+2023-06-23 10:22:39,070 Found row: {'pool': 'regression'}
+2023-06-23 10:22:39,071 Found row: {'pool': 'regression'}
+2023-06-23 10:22:39,071 Found row: {'pool': 'magnareg'}
+2023-06-23 10:22:39,071 Found row: {'pool': '12hrreg'}
+2023-06-23 10:22:39,072 Found row: {'pool': '12hrreg'}
+2023-06-23 10:22:39,072 Found row: {'pool': '12hrreg'}
+2023-06-23 10:22:39,072 Found row: {'pool': '12hrreg'}
+2023-06-23 10:22:39,072 Found row: {'pool': '12hrreg'}
+2023-06-23 10:22:39,073 Found row: {'pool': 'magnareg'}
+2023-06-23 10:22:39,073 Found row: {'pool': 'magnareg'}
+2023-06-23 10:22:39,073 Connected to localhost
+2023-06-23 10:22:39,073 Collecting metrics for available_vms
+2023-06-23 10:22:39,074 Found Cluster in Options
+2023-06-23 10:22:39,074 Cluster Name static_vms
+2023-06-23 10:22:39,074 Query Name SELECT poolId as `pool`, COUNT(*) AS count FROM (SELECT poolId FROM `tarun`.`my_scope`.`collection1` WHERE IS_ARRAY(poolId)=FALSE and state='available' UNION ALL SELECT poolId FROM `tarun`.`my_scope`.`collection1` UNNEST poolId where `collection1`.state = 'available'  ) AS pools group by poolId
+2023-06-23 10:22:39,080 Label is ['pool="regression"']
+2023-06-23 10:22:39,080 Label is ['pool="magnareg"']
+2023-06-23 10:22:39,081 Label is ['pool="12hrreg"']
+2023-06-23 10:22:39,081 Collecting metrics for memory_usage
+2023-06-23 10:22:39,081 Found CSV in Options
+2023-06-23 10:22:39,082 Collecting metrics for disk_usage
+2023-06-23 10:22:39,082 Found CSV in Options
+2023-06-23 10:22:39,083 Collecting metrics for cpu_load_avg_5mins
+2023-06-23 10:22:39,083 Found CSV in Options
+2023-06-23 10:22:39,083 Collecting metrics for vm_health_ssh_status
+2023-06-23 10:22:39,083 Found CSV in Options
+2023-06-23 10:22:39,085 172.16.238.13 - - [23/Jun/2023 10:22:39] "GET /metrics HTTP/1.1" 200 -
+2023-06-23 10:23:39,000 --Test--
+2023-06-23 10:23:39,000 ----Details Started----
+2023-06-23 10:23:39,000 static_vms
+2023-06-23 10:23:39,001 {'host': 'localhost', 'username': 'Administrator', 'password': 'password'}
+2023-06-23 10:23:39,001 ----Details Ended----
+2023-06-23 10:23:39,001 --Connecting to Below Cluster with Hard Coded---
+2023-06-23 10:23:39,049 --Bucket Set---
+2023-06-23 10:23:39,051 --Query Set---
+2023-06-23 10:23:39,057 Found row: {'pool': 'regression'}
+2023-06-23 10:23:39,058 Found row: {'pool': 'regression'}
+2023-06-23 10:23:39,058 Found row: {'pool': 'magnareg'}
+2023-06-23 10:23:39,058 Found row: {'pool': '12hrreg'}
+2023-06-23 10:23:39,059 Found row: {'pool': '12hrreg'}
+2023-06-23 10:23:39,059 Found row: {'pool': '12hrreg'}
+2023-06-23 10:23:39,059 Found row: {'pool': '12hrreg'}
+2023-06-23 10:23:39,060 Found row: {'pool': '12hrreg'}
+2023-06-23 10:23:39,060 Found row: {'pool': 'magnareg'}
+2023-06-23 10:23:39,060 Found row: {'pool': 'magnareg'}
+2023-06-23 10:23:39,061 Connected to localhost
+2023-06-23 10:23:39,061 Collecting metrics for available_vms
+2023-06-23 10:23:39,061 Found Cluster in Options
+2023-06-23 10:23:39,062 Cluster Name static_vms
+2023-06-23 10:23:39,062 Query Name SELECT poolId as `pool`, COUNT(*) AS count FROM (SELECT poolId FROM `tarun`.`my_scope`.`collection1` WHERE IS_ARRAY(poolId)=FALSE and state='available' UNION ALL SELECT poolId FROM `tarun`.`my_scope`.`collection1` UNNEST poolId where `collection1`.state = 'available'  ) AS pools group by poolId
+2023-06-23 10:23:39,067 Label is ['pool="12hrreg"']
+2023-06-23 10:23:39,068 Label is ['pool="regression"']
+2023-06-23 10:23:39,068 Label is ['pool="magnareg"']
+2023-06-23 10:23:39,068 Collecting metrics for memory_usage
+2023-06-23 10:23:39,068 Found CSV in Options
+2023-06-23 10:23:39,069 Collecting metrics for disk_usage
+2023-06-23 10:23:39,069 Found CSV in Options
+2023-06-23 10:23:39,069 Collecting metrics for cpu_load_avg_5mins
+2023-06-23 10:23:39,069 Found CSV in Options
+2023-06-23 10:23:39,070 Collecting metrics for vm_health_ssh_status
+2023-06-23 10:23:39,070 Found CSV in Options
+2023-06-23 10:23:39,071 172.16.238.13 - - [23/Jun/2023 10:23:39] "GET /metrics HTTP/1.1" 200 -
+2023-06-23 10:24:39,000 --Test--
+2023-06-23 10:24:39,000 ----Details Started----
+2023-06-23 10:24:39,001 static_vms
+2023-06-23 10:24:39,001 {'host': 'localhost', 'username': 'Administrator', 'password': 'password'}
+2023-06-23 10:24:39,002 ----Details Ended----
+2023-06-23 10:24:39,002 --Connecting to Below Cluster with Hard Coded---
+2023-06-23 10:24:39,050 --Bucket Set---
+2023-06-23 10:24:39,052 --Query Set---
+2023-06-23 10:24:39,058 Found row: {'pool': 'regression'}
+2023-06-23 10:24:39,058 Found row: {'pool': 'regression'}
+2023-06-23 10:24:39,058 Found row: {'pool': 'magnareg'}
+2023-06-23 10:24:39,059 Found row: {'pool': '12hrreg'}
+2023-06-23 10:24:39,059 Found row: {'pool': '12hrreg'}
+2023-06-23 10:24:39,060 Found row: {'pool': '12hrreg'}
+2023-06-23 10:24:39,060 Found row: {'pool': '12hrreg'}
+2023-06-23 10:24:39,060 Found row: {'pool': '12hrreg'}
+2023-06-23 10:24:39,061 Found row: {'pool': 'magnareg'}
+2023-06-23 10:24:39,061 Found row: {'pool': 'magnareg'}
+2023-06-23 10:24:39,061 Connected to localhost
+2023-06-23 10:24:39,061 Collecting metrics for available_vms
+2023-06-23 10:24:39,062 Found Cluster in Options
+2023-06-23 10:24:39,062 Cluster Name static_vms
+2023-06-23 10:24:39,062 Query Name SELECT poolId as `pool`, COUNT(*) AS count FROM (SELECT poolId FROM `tarun`.`my_scope`.`collection1` WHERE IS_ARRAY(poolId)=FALSE and state='available' UNION ALL SELECT poolId FROM `tarun`.`my_scope`.`collection1` UNNEST poolId where `collection1`.state = 'available'  ) AS pools group by poolId
+2023-06-23 10:24:39,068 Label is ['pool="magnareg"']
+2023-06-23 10:24:39,069 Label is ['pool="12hrreg"']
+2023-06-23 10:24:39,069 Label is ['pool="regression"']
+2023-06-23 10:24:39,069 Collecting metrics for memory_usage
+2023-06-23 10:24:39,070 Found CSV in Options
+2023-06-23 10:24:39,070 Collecting metrics for disk_usage
+2023-06-23 10:24:39,070 Found CSV in Options
+2023-06-23 10:24:39,071 Collecting metrics for cpu_load_avg_5mins
+2023-06-23 10:24:39,071 Found CSV in Options
+2023-06-23 10:24:39,071 Collecting metrics for vm_health_ssh_status
+2023-06-23 10:24:39,071 Found CSV in Options
+2023-06-23 10:24:39,073 172.16.238.13 - - [23/Jun/2023 10:24:39] "GET /metrics HTTP/1.1" 200 -
+2023-06-23 10:25:39,000 --Test--
+2023-06-23 10:25:39,001 ----Details Started----
+2023-06-23 10:25:39,001 static_vms
+2023-06-23 10:25:39,002 {'host': 'localhost', 'username': 'Administrator', 'password': 'password'}
+2023-06-23 10:25:39,002 ----Details Ended----
+2023-06-23 10:25:39,002 --Connecting to Below Cluster with Hard Coded---
+2023-06-23 10:25:39,050 --Bucket Set---
+2023-06-23 10:25:39,053 --Query Set---
+2023-06-23 10:25:39,059 Found row: {'pool': 'regression'}
+2023-06-23 10:25:39,060 Found row: {'pool': 'regression'}
+2023-06-23 10:25:39,060 Found row: {'pool': 'magnareg'}
+2023-06-23 10:25:39,060 Found row: {'pool': '12hrreg'}
+2023-06-23 10:25:39,061 Found row: {'pool': '12hrreg'}
+2023-06-23 10:25:39,061 Found row: {'pool': '12hrreg'}
+2023-06-23 10:25:39,061 Found row: {'pool': '12hrreg'}
+2023-06-23 10:25:39,062 Found row: {'pool': '12hrreg'}
+2023-06-23 10:25:39,062 Found row: {'pool': 'magnareg'}
+2023-06-23 10:25:39,062 Found row: {'pool': 'magnareg'}
+2023-06-23 10:25:39,063 Connected to localhost
+2023-06-23 10:25:39,063 Collecting metrics for available_vms
+2023-06-23 10:25:39,063 Found Cluster in Options
+2023-06-23 10:25:39,064 Cluster Name static_vms
+2023-06-23 10:25:39,064 Query Name SELECT poolId as `pool`, COUNT(*) AS count FROM (SELECT poolId FROM `tarun`.`my_scope`.`collection1` WHERE IS_ARRAY(poolId)=FALSE and state='available' UNION ALL SELECT poolId FROM `tarun`.`my_scope`.`collection1` UNNEST poolId where `collection1`.state = 'available'  ) AS pools group by poolId
+2023-06-23 10:25:39,071 Label is ['pool="magnareg"']
+2023-06-23 10:25:39,071 Label is ['pool="12hrreg"']
+2023-06-23 10:25:39,071 Label is ['pool="regression"']
+2023-06-23 10:25:39,072 Collecting metrics for memory_usage
+2023-06-23 10:25:39,072 Found CSV in Options
+2023-06-23 10:25:39,072 Collecting metrics for disk_usage
+2023-06-23 10:25:39,073 Found CSV in Options
+2023-06-23 10:25:39,073 Collecting metrics for cpu_load_avg_5mins
+2023-06-23 10:25:39,073 Found CSV in Options
+2023-06-23 10:25:39,074 Collecting metrics for vm_health_ssh_status
+2023-06-23 10:25:39,074 Found CSV in Options
+2023-06-23 10:25:39,075 172.16.238.13 - - [23/Jun/2023 10:25:39] "GET /metrics HTTP/1.1" 200 -
+2023-06-23 10:26:38,999 --Test--
+2023-06-23 10:26:39,000 ----Details Started----
+2023-06-23 10:26:39,000 static_vms
+2023-06-23 10:26:39,001 {'host': 'localhost', 'username': 'Administrator', 'password': 'password'}
+2023-06-23 10:26:39,001 ----Details Ended----
+2023-06-23 10:26:39,001 --Connecting to Below Cluster with Hard Coded---
+2023-06-23 10:26:39,037 --Bucket Set---
+2023-06-23 10:26:39,039 --Query Set---
+2023-06-23 10:26:39,044 Found row: {'pool': 'regression'}
+2023-06-23 10:26:39,045 Found row: {'pool': 'regression'}
+2023-06-23 10:26:39,045 Found row: {'pool': 'magnareg'}
+2023-06-23 10:26:39,045 Found row: {'pool': '12hrreg'}
+2023-06-23 10:26:39,046 Found row: {'pool': '12hrreg'}
+2023-06-23 10:26:39,046 Found row: {'pool': '12hrreg'}
+2023-06-23 10:26:39,047 Found row: {'pool': '12hrreg'}
+2023-06-23 10:26:39,047 Found row: {'pool': '12hrreg'}
+2023-06-23 10:26:39,047 Found row: {'pool': 'magnareg'}
+2023-06-23 10:26:39,048 Found row: {'pool': 'magnareg'}
+2023-06-23 10:26:39,048 Connected to localhost
+2023-06-23 10:26:39,048 Collecting metrics for available_vms
+2023-06-23 10:26:39,049 Found Cluster in Options
+2023-06-23 10:26:39,049 Cluster Name static_vms
+2023-06-23 10:26:39,050 Query Name SELECT poolId as `pool`, COUNT(*) AS count FROM (SELECT poolId FROM `tarun`.`my_scope`.`collection1` WHERE IS_ARRAY(poolId)=FALSE and state='available' UNION ALL SELECT poolId FROM `tarun`.`my_scope`.`collection1` UNNEST poolId where `collection1`.state = 'available'  ) AS pools group by poolId
+2023-06-23 10:26:39,055 Label is ['pool="regression"']
+2023-06-23 10:26:39,055 Label is ['pool="magnareg"']
+2023-06-23 10:26:39,056 Label is ['pool="12hrreg"']
+2023-06-23 10:26:39,056 Collecting metrics for memory_usage
+2023-06-23 10:26:39,056 Found CSV in Options
+2023-06-23 10:26:39,057 Collecting metrics for disk_usage
+2023-06-23 10:26:39,057 Found CSV in Options
+2023-06-23 10:26:39,057 Collecting metrics for cpu_load_avg_5mins
+2023-06-23 10:26:39,057 Found CSV in Options
+2023-06-23 10:26:39,058 Collecting metrics for vm_health_ssh_status
+2023-06-23 10:26:39,058 Found CSV in Options
+2023-06-23 10:26:39,059 172.16.238.13 - - [23/Jun/2023 10:26:39] "GET /metrics HTTP/1.1" 200 -
+2023-06-23 10:27:38,999 --Test--
+2023-06-23 10:27:39,000 ----Details Started----
+2023-06-23 10:27:39,000 static_vms
+2023-06-23 10:27:39,001 {'host': 'localhost', 'username': 'Administrator', 'password': 'password'}
+2023-06-23 10:27:39,001 ----Details Ended----
+2023-06-23 10:27:39,001 --Connecting to Below Cluster with Hard Coded---
+2023-06-23 10:27:39,036 --Bucket Set---
+2023-06-23 10:27:39,038 --Query Set---
+2023-06-23 10:27:39,044 Found row: {'pool': 'regression'}
+2023-06-23 10:27:39,044 Found row: {'pool': 'regression'}
+2023-06-23 10:27:39,045 Found row: {'pool': 'magnareg'}
+2023-06-23 10:27:39,045 Found row: {'pool': '12hrreg'}
+2023-06-23 10:27:39,046 Found row: {'pool': '12hrreg'}
+2023-06-23 10:27:39,046 Found row: {'pool': '12hrreg'}
+2023-06-23 10:27:39,046 Found row: {'pool': '12hrreg'}
+2023-06-23 10:27:39,047 Found row: {'pool': '12hrreg'}
+2023-06-23 10:27:39,047 Found row: {'pool': 'magnareg'}
+2023-06-23 10:27:39,047 Found row: {'pool': 'magnareg'}
+2023-06-23 10:27:39,048 Connected to localhost
+2023-06-23 10:27:39,048 Collecting metrics for available_vms
+2023-06-23 10:27:39,048 Found Cluster in Options
+2023-06-23 10:27:39,049 Cluster Name static_vms
+2023-06-23 10:27:39,049 Query Name SELECT poolId as `pool`, COUNT(*) AS count FROM (SELECT poolId FROM `tarun`.`my_scope`.`collection1` WHERE IS_ARRAY(poolId)=FALSE and state='available' UNION ALL SELECT poolId FROM `tarun`.`my_scope`.`collection1` UNNEST poolId where `collection1`.state = 'available'  ) AS pools group by poolId
+2023-06-23 10:27:39,055 Label is ['pool="12hrreg"']
+2023-06-23 10:27:39,056 Label is ['pool="regression"']
+2023-06-23 10:27:39,056 Label is ['pool="magnareg"']
+2023-06-23 10:27:39,056 Collecting metrics for memory_usage
+2023-06-23 10:27:39,057 Found CSV in Options
+2023-06-23 10:27:39,057 Collecting metrics for disk_usage
+2023-06-23 10:27:39,057 Found CSV in Options
+2023-06-23 10:27:39,058 Collecting metrics for cpu_load_avg_5mins
+2023-06-23 10:27:39,058 Found CSV in Options
+2023-06-23 10:27:39,058 Collecting metrics for vm_health_ssh_status
+2023-06-23 10:27:39,059 Found CSV in Options
+2023-06-23 10:27:39,060 172.16.238.13 - - [23/Jun/2023 10:27:39] "GET /metrics HTTP/1.1" 200 -
+2023-06-23 10:28:38,999 --Test--
+2023-06-23 10:28:39,000 ----Details Started----
+2023-06-23 10:28:39,000 static_vms
+2023-06-23 10:28:39,000 {'host': 'localhost', 'username': 'Administrator', 'password': 'password'}
+2023-06-23 10:28:39,001 ----Details Ended----
+2023-06-23 10:28:39,001 --Connecting to Below Cluster with Hard Coded---
+2023-06-23 10:28:39,042 --Bucket Set---
+2023-06-23 10:28:39,045 --Query Set---
+2023-06-23 10:28:39,049 Found row: {'pool': 'regression'}
+2023-06-23 10:28:39,050 Found row: {'pool': 'regression'}
+2023-06-23 10:28:39,050 Found row: {'pool': 'magnareg'}
+2023-06-23 10:28:39,051 Found row: {'pool': '12hrreg'}
+2023-06-23 10:28:39,051 Found row: {'pool': '12hrreg'}
+2023-06-23 10:28:39,051 Found row: {'pool': '12hrreg'}
+2023-06-23 10:28:39,052 Found row: {'pool': '12hrreg'}
+2023-06-23 10:28:39,052 Found row: {'pool': '12hrreg'}
+2023-06-23 10:28:39,052 Found row: {'pool': 'magnareg'}
+2023-06-23 10:28:39,053 Found row: {'pool': 'magnareg'}
+2023-06-23 10:28:39,053 Connected to localhost
+2023-06-23 10:28:39,053 Collecting metrics for available_vms
+2023-06-23 10:28:39,053 Found Cluster in Options
+2023-06-23 10:28:39,054 Cluster Name static_vms
+2023-06-23 10:28:39,054 Query Name SELECT poolId as `pool`, COUNT(*) AS count FROM (SELECT poolId FROM `tarun`.`my_scope`.`collection1` WHERE IS_ARRAY(poolId)=FALSE and state='available' UNION ALL SELECT poolId FROM `tarun`.`my_scope`.`collection1` UNNEST poolId where `collection1`.state = 'available'  ) AS pools group by poolId
+2023-06-23 10:28:39,061 Label is ['pool="regression"']
+2023-06-23 10:28:39,061 Label is ['pool="magnareg"']
+2023-06-23 10:28:39,062 Label is ['pool="12hrreg"']
+2023-06-23 10:28:39,062 Collecting metrics for memory_usage
+2023-06-23 10:28:39,062 Found CSV in Options
+2023-06-23 10:28:39,063 Collecting metrics for disk_usage
+2023-06-23 10:28:39,063 Found CSV in Options
+2023-06-23 10:28:39,064 Collecting metrics for cpu_load_avg_5mins
+2023-06-23 10:28:39,064 Found CSV in Options
+2023-06-23 10:28:39,064 Collecting metrics for vm_health_ssh_status
+2023-06-23 10:28:39,064 Found CSV in Options
+2023-06-23 10:28:39,066 172.16.238.13 - - [23/Jun/2023 10:28:39] "GET /metrics HTTP/1.1" 200 -
+2023-06-23 10:29:39,000 --Test--
+2023-06-23 10:29:39,000 ----Details Started----
+2023-06-23 10:29:39,001 static_vms
+2023-06-23 10:29:39,001 {'host': 'localhost', 'username': 'Administrator', 'password': 'password'}
+2023-06-23 10:29:39,002 ----Details Ended----
+2023-06-23 10:29:39,002 --Connecting to Below Cluster with Hard Coded---
+2023-06-23 10:29:39,037 --Bucket Set---
+2023-06-23 10:29:39,039 --Query Set---
+2023-06-23 10:29:39,044 Found row: {'pool': 'regression'}
+2023-06-23 10:29:39,045 Found row: {'pool': 'regression'}
+2023-06-23 10:29:39,045 Found row: {'pool': 'magnareg'}
+2023-06-23 10:29:39,046 Found row: {'pool': '12hrreg'}
+2023-06-23 10:29:39,046 Found row: {'pool': '12hrreg'}
+2023-06-23 10:29:39,046 Found row: {'pool': '12hrreg'}
+2023-06-23 10:29:39,047 Found row: {'pool': '12hrreg'}
+2023-06-23 10:29:39,047 Found row: {'pool': '12hrreg'}
+2023-06-23 10:29:39,048 Found row: {'pool': 'magnareg'}
+2023-06-23 10:29:39,048 Found row: {'pool': 'magnareg'}
+2023-06-23 10:29:39,048 Connected to localhost
+2023-06-23 10:29:39,049 Collecting metrics for available_vms
+2023-06-23 10:29:39,049 Found Cluster in Options
+2023-06-23 10:29:39,050 Cluster Name static_vms
+2023-06-23 10:29:39,050 Query Name SELECT poolId as `pool`, COUNT(*) AS count FROM (SELECT poolId FROM `tarun`.`my_scope`.`collection1` WHERE IS_ARRAY(poolId)=FALSE and state='available' UNION ALL SELECT poolId FROM `tarun`.`my_scope`.`collection1` UNNEST poolId where `collection1`.state = 'available'  ) AS pools group by poolId
+2023-06-23 10:29:39,056 Label is ['pool="12hrreg"']
+2023-06-23 10:29:39,056 Label is ['pool="regression"']
+2023-06-23 10:29:39,056 Label is ['pool="magnareg"']
+2023-06-23 10:29:39,057 Collecting metrics for memory_usage
+2023-06-23 10:29:39,057 Found CSV in Options
+2023-06-23 10:29:39,058 Collecting metrics for disk_usage
+2023-06-23 10:29:39,058 Found CSV in Options
+2023-06-23 10:29:39,058 Collecting metrics for cpu_load_avg_5mins
+2023-06-23 10:29:39,059 Found CSV in Options
+2023-06-23 10:29:39,059 Collecting metrics for vm_health_ssh_status
+2023-06-23 10:29:39,059 Found CSV in Options
+2023-06-23 10:29:39,061 172.16.238.13 - - [23/Jun/2023 10:29:39] "GET /metrics HTTP/1.1" 200 -
+2023-06-23 10:30:39,000 --Test--
+2023-06-23 10:30:39,001 ----Details Started----
+2023-06-23 10:30:39,001 static_vms
+2023-06-23 10:30:39,001 {'host': 'localhost', 'username': 'Administrator', 'password': 'password'}
+2023-06-23 10:30:39,002 ----Details Ended----
+2023-06-23 10:30:39,002 --Connecting to Below Cluster with Hard Coded---
+2023-06-23 10:30:39,041 --Bucket Set---
+2023-06-23 10:30:39,044 --Query Set---
+2023-06-23 10:30:39,049 Found row: {'pool': 'regression'}
+2023-06-23 10:30:39,050 Found row: {'pool': 'regression'}
+2023-06-23 10:30:39,050 Found row: {'pool': 'magnareg'}
+2023-06-23 10:30:39,050 Found row: {'pool': '12hrreg'}
+2023-06-23 10:30:39,051 Found row: {'pool': '12hrreg'}
+2023-06-23 10:30:39,051 Found row: {'pool': '12hrreg'}
+2023-06-23 10:30:39,051 Found row: {'pool': '12hrreg'}
+2023-06-23 10:30:39,051 Found row: {'pool': '12hrreg'}
+2023-06-23 10:30:39,052 Found row: {'pool': 'magnareg'}
+2023-06-23 10:30:39,052 Found row: {'pool': 'magnareg'}
+2023-06-23 10:30:39,052 Connected to localhost
+2023-06-23 10:30:39,052 Collecting metrics for available_vms
+2023-06-23 10:30:39,052 Found Cluster in Options
+2023-06-23 10:30:39,053 Cluster Name static_vms
+2023-06-23 10:30:39,053 Query Name SELECT poolId as `pool`, COUNT(*) AS count FROM (SELECT poolId FROM `tarun`.`my_scope`.`collection1` WHERE IS_ARRAY(poolId)=FALSE and state='available' UNION ALL SELECT poolId FROM `tarun`.`my_scope`.`collection1` UNNEST poolId where `collection1`.state = 'available'  ) AS pools group by poolId
+2023-06-23 10:30:39,060 Label is ['pool="regression"']
+2023-06-23 10:30:39,061 Label is ['pool="magnareg"']
+2023-06-23 10:30:39,061 Label is ['pool="12hrreg"']
+2023-06-23 10:30:39,061 Collecting metrics for memory_usage
+2023-06-23 10:30:39,062 Found CSV in Options
+2023-06-23 10:30:39,062 Collecting metrics for disk_usage
+2023-06-23 10:30:39,062 Found CSV in Options
+2023-06-23 10:30:39,063 Collecting metrics for cpu_load_avg_5mins
+2023-06-23 10:30:39,063 Found CSV in Options
+2023-06-23 10:30:39,063 Collecting metrics for vm_health_ssh_status
+2023-06-23 10:30:39,064 Found CSV in Options
+2023-06-23 10:30:39,065 172.16.238.13 - - [23/Jun/2023 10:30:39] "GET /metrics HTTP/1.1" 200 -
+2023-06-23 10:31:39,000 --Test--
+2023-06-23 10:31:39,001 ----Details Started----
+2023-06-23 10:31:39,001 static_vms
+2023-06-23 10:31:39,002 {'host': 'localhost', 'username': 'Administrator', 'password': 'password'}
+2023-06-23 10:31:39,002 ----Details Ended----
+2023-06-23 10:31:39,003 --Connecting to Below Cluster with Hard Coded---
+2023-06-23 10:31:39,047 --Bucket Set---
+2023-06-23 10:31:39,050 --Query Set---
+2023-06-23 10:31:39,056 Found row: {'pool': 'regression'}
+2023-06-23 10:31:39,056 Found row: {'pool': 'regression'}
+2023-06-23 10:31:39,057 Found row: {'pool': 'magnareg'}
+2023-06-23 10:31:39,057 Found row: {'pool': '12hrreg'}
+2023-06-23 10:31:39,057 Found row: {'pool': '12hrreg'}
+2023-06-23 10:31:39,058 Found row: {'pool': '12hrreg'}
+2023-06-23 10:31:39,058 Found row: {'pool': '12hrreg'}
+2023-06-23 10:31:39,058 Found row: {'pool': '12hrreg'}
+2023-06-23 10:31:39,058 Found row: {'pool': 'magnareg'}
+2023-06-23 10:31:39,058 Found row: {'pool': 'magnareg'}
+2023-06-23 10:31:39,059 Connected to localhost
+2023-06-23 10:31:39,059 Collecting metrics for available_vms
+2023-06-23 10:31:39,059 Found Cluster in Options
+2023-06-23 10:31:39,060 Cluster Name static_vms
+2023-06-23 10:31:39,060 Query Name SELECT poolId as `pool`, COUNT(*) AS count FROM (SELECT poolId FROM `tarun`.`my_scope`.`collection1` WHERE IS_ARRAY(poolId)=FALSE and state='available' UNION ALL SELECT poolId FROM `tarun`.`my_scope`.`collection1` UNNEST poolId where `collection1`.state = 'available'  ) AS pools group by poolId
+2023-06-23 10:31:39,065 Label is ['pool="regression"']
+2023-06-23 10:31:39,066 Label is ['pool="magnareg"']
+2023-06-23 10:31:39,066 Label is ['pool="12hrreg"']
+2023-06-23 10:31:39,066 Collecting metrics for memory_usage
+2023-06-23 10:31:39,066 Found CSV in Options
+2023-06-23 10:31:39,067 Collecting metrics for disk_usage
+2023-06-23 10:31:39,067 Found CSV in Options
+2023-06-23 10:31:39,067 Collecting metrics for cpu_load_avg_5mins
+2023-06-23 10:31:39,067 Found CSV in Options
+2023-06-23 10:31:39,068 Collecting metrics for vm_health_ssh_status
+2023-06-23 10:31:39,068 Found CSV in Options
+2023-06-23 10:31:39,069 172.16.238.13 - - [23/Jun/2023 10:31:39] "GET /metrics HTTP/1.1" 200 -
+2023-06-23 10:32:39,001 --Test--
+2023-06-23 10:32:39,001 ----Details Started----
+2023-06-23 10:32:39,002 static_vms
+2023-06-23 10:32:39,002 {'host': 'localhost', 'username': 'Administrator', 'password': 'password'}
+2023-06-23 10:32:39,002 ----Details Ended----
+2023-06-23 10:32:39,003 --Connecting to Below Cluster with Hard Coded---
+2023-06-23 10:32:39,038 --Bucket Set---
+2023-06-23 10:32:39,040 --Query Set---
+2023-06-23 10:32:39,046 Found row: {'pool': 'regression'}
+2023-06-23 10:32:39,046 Found row: {'pool': 'regression'}
+2023-06-23 10:32:39,047 Found row: {'pool': 'magnareg'}
+2023-06-23 10:32:39,047 Found row: {'pool': '12hrreg'}
+2023-06-23 10:32:39,048 Found row: {'pool': '12hrreg'}
+2023-06-23 10:32:39,048 Found row: {'pool': '12hrreg'}
+2023-06-23 10:32:39,048 Found row: {'pool': '12hrreg'}
+2023-06-23 10:32:39,048 Found row: {'pool': '12hrreg'}
+2023-06-23 10:32:39,049 Found row: {'pool': 'magnareg'}
+2023-06-23 10:32:39,049 Found row: {'pool': 'magnareg'}
+2023-06-23 10:32:39,050 Connected to localhost
+2023-06-23 10:32:39,050 Collecting metrics for available_vms
+2023-06-23 10:32:39,050 Found Cluster in Options
+2023-06-23 10:32:39,051 Cluster Name static_vms
+2023-06-23 10:32:39,051 Query Name SELECT poolId as `pool`, COUNT(*) AS count FROM (SELECT poolId FROM `tarun`.`my_scope`.`collection1` WHERE IS_ARRAY(poolId)=FALSE and state='available' UNION ALL SELECT poolId FROM `tarun`.`my_scope`.`collection1` UNNEST poolId where `collection1`.state = 'available'  ) AS pools group by poolId
+2023-06-23 10:32:39,057 Label is ['pool="magnareg"']
+2023-06-23 10:32:39,058 Label is ['pool="12hrreg"']
+2023-06-23 10:32:39,058 Label is ['pool="regression"']
+2023-06-23 10:32:39,058 Collecting metrics for memory_usage
+2023-06-23 10:32:39,058 Found CSV in Options
+2023-06-23 10:32:39,059 Collecting metrics for disk_usage
+2023-06-23 10:32:39,059 Found CSV in Options
+2023-06-23 10:32:39,059 Collecting metrics for cpu_load_avg_5mins
+2023-06-23 10:32:39,060 Found CSV in Options
+2023-06-23 10:32:39,060 Collecting metrics for vm_health_ssh_status
+2023-06-23 10:32:39,060 Found CSV in Options
+2023-06-23 10:32:39,062 172.16.238.13 - - [23/Jun/2023 10:32:39] "GET /metrics HTTP/1.1" 200 -
+2023-06-23 10:33:39,000 --Test--
+2023-06-23 10:33:39,001 ----Details Started----
+2023-06-23 10:33:39,001 static_vms
+2023-06-23 10:33:39,002 {'host': 'localhost', 'username': 'Administrator', 'password': 'password'}
+2023-06-23 10:33:39,002 ----Details Ended----
+2023-06-23 10:33:39,002 --Connecting to Below Cluster with Hard Coded---
+2023-06-23 10:33:39,041 --Bucket Set---
+2023-06-23 10:33:39,043 --Query Set---
+2023-06-23 10:33:39,049 Found row: {'pool': 'regression'}
+2023-06-23 10:33:39,050 Found row: {'pool': 'regression'}
+2023-06-23 10:33:39,050 Found row: {'pool': 'magnareg'}
+2023-06-23 10:33:39,050 Found row: {'pool': '12hrreg'}
+2023-06-23 10:33:39,051 Found row: {'pool': '12hrreg'}
+2023-06-23 10:33:39,051 Found row: {'pool': '12hrreg'}
+2023-06-23 10:33:39,051 Found row: {'pool': '12hrreg'}
+2023-06-23 10:33:39,051 Found row: {'pool': '12hrreg'}
+2023-06-23 10:33:39,052 Found row: {'pool': 'magnareg'}
+2023-06-23 10:33:39,052 Found row: {'pool': 'magnareg'}
+2023-06-23 10:33:39,052 Connected to localhost
+2023-06-23 10:33:39,053 Collecting metrics for available_vms
+2023-06-23 10:33:39,053 Found Cluster in Options
+2023-06-23 10:33:39,053 Cluster Name static_vms
+2023-06-23 10:33:39,053 Query Name SELECT poolId as `pool`, COUNT(*) AS count FROM (SELECT poolId FROM `tarun`.`my_scope`.`collection1` WHERE IS_ARRAY(poolId)=FALSE and state='available' UNION ALL SELECT poolId FROM `tarun`.`my_scope`.`collection1` UNNEST poolId where `collection1`.state = 'available'  ) AS pools group by poolId
+2023-06-23 10:33:39,060 Label is ['pool="magnareg"']
+2023-06-23 10:33:39,060 Label is ['pool="12hrreg"']
+2023-06-23 10:33:39,060 Label is ['pool="regression"']
+2023-06-23 10:33:39,061 Collecting metrics for memory_usage
+2023-06-23 10:33:39,061 Found CSV in Options
+2023-06-23 10:33:39,062 Collecting metrics for disk_usage
+2023-06-23 10:33:39,062 Found CSV in Options
+2023-06-23 10:33:39,062 Collecting metrics for cpu_load_avg_5mins
+2023-06-23 10:33:39,062 Found CSV in Options
+2023-06-23 10:33:39,063 Collecting metrics for vm_health_ssh_status
+2023-06-23 10:33:39,063 Found CSV in Options
+2023-06-23 10:33:39,064 172.16.238.13 - - [23/Jun/2023 10:33:39] "GET /metrics HTTP/1.1" 200 -
+2023-06-23 10:34:39,000 --Test--
+2023-06-23 10:34:39,000 ----Details Started----
+2023-06-23 10:34:39,001 static_vms
+2023-06-23 10:34:39,001 {'host': 'localhost', 'username': 'Administrator', 'password': 'password'}
+2023-06-23 10:34:39,001 ----Details Ended----
+2023-06-23 10:34:39,002 --Connecting to Below Cluster with Hard Coded---
+2023-06-23 10:34:39,040 --Bucket Set---
+2023-06-23 10:34:39,042 --Query Set---
+2023-06-23 10:34:39,047 Found row: {'pool': 'regression'}
+2023-06-23 10:34:39,048 Found row: {'pool': 'regression'}
+2023-06-23 10:34:39,048 Found row: {'pool': 'magnareg'}
+2023-06-23 10:34:39,049 Found row: {'pool': '12hrreg'}
+2023-06-23 10:34:39,049 Found row: {'pool': '12hrreg'}
+2023-06-23 10:34:39,049 Found row: {'pool': '12hrreg'}
+2023-06-23 10:34:39,050 Found row: {'pool': '12hrreg'}
+2023-06-23 10:34:39,050 Found row: {'pool': '12hrreg'}
+2023-06-23 10:34:39,050 Found row: {'pool': 'magnareg'}
+2023-06-23 10:34:39,051 Found row: {'pool': 'magnareg'}
+2023-06-23 10:34:39,051 Connected to localhost
+2023-06-23 10:34:39,051 Collecting metrics for available_vms
+2023-06-23 10:34:39,051 Found Cluster in Options
+2023-06-23 10:34:39,052 Cluster Name static_vms
+2023-06-23 10:34:39,052 Query Name SELECT poolId as `pool`, COUNT(*) AS count FROM (SELECT poolId FROM `tarun`.`my_scope`.`collection1` WHERE IS_ARRAY(poolId)=FALSE and state='available' UNION ALL SELECT poolId FROM `tarun`.`my_scope`.`collection1` UNNEST poolId where `collection1`.state = 'available'  ) AS pools group by poolId
+2023-06-23 10:34:39,058 Label is ['pool="magnareg"']
+2023-06-23 10:34:39,058 Label is ['pool="12hrreg"']
+2023-06-23 10:34:39,059 Label is ['pool="regression"']
+2023-06-23 10:34:39,059 Collecting metrics for memory_usage
+2023-06-23 10:34:39,059 Found CSV in Options
+2023-06-23 10:34:39,060 Collecting metrics for disk_usage
+2023-06-23 10:34:39,060 Found CSV in Options
+2023-06-23 10:34:39,060 Collecting metrics for cpu_load_avg_5mins
+2023-06-23 10:34:39,061 Found CSV in Options
+2023-06-23 10:34:39,061 Collecting metrics for vm_health_ssh_status
+2023-06-23 10:34:39,061 Found CSV in Options
+2023-06-23 10:34:39,063 172.16.238.13 - - [23/Jun/2023 10:34:39] "GET /metrics HTTP/1.1" 200 -
+2023-06-23 10:35:39,001 --Test--
+2023-06-23 10:35:39,001 ----Details Started----
+2023-06-23 10:35:39,002 static_vms
+2023-06-23 10:35:39,002 {'host': 'localhost', 'username': 'Administrator', 'password': 'password'}
+2023-06-23 10:35:39,002 ----Details Ended----
+2023-06-23 10:35:39,003 --Connecting to Below Cluster with Hard Coded---
+2023-06-23 10:35:39,040 --Bucket Set---
+2023-06-23 10:35:39,042 --Query Set---
+2023-06-23 10:35:39,049 Found row: {'pool': 'regression'}
+2023-06-23 10:35:39,049 Found row: {'pool': 'regression'}
+2023-06-23 10:35:39,050 Found row: {'pool': 'magnareg'}
+2023-06-23 10:35:39,050 Found row: {'pool': '12hrreg'}
+2023-06-23 10:35:39,050 Found row: {'pool': '12hrreg'}
+2023-06-23 10:35:39,051 Found row: {'pool': '12hrreg'}
+2023-06-23 10:35:39,051 Found row: {'pool': '12hrreg'}
+2023-06-23 10:35:39,051 Found row: {'pool': '12hrreg'}
+2023-06-23 10:35:39,052 Found row: {'pool': 'magnareg'}
+2023-06-23 10:35:39,052 Found row: {'pool': 'magnareg'}
+2023-06-23 10:35:39,052 Connected to localhost
+2023-06-23 10:35:39,053 Collecting metrics for available_vms
+2023-06-23 10:35:39,053 Found Cluster in Options
+2023-06-23 10:35:39,053 Cluster Name static_vms
+2023-06-23 10:35:39,054 Query Name SELECT poolId as `pool`, COUNT(*) AS count FROM (SELECT poolId FROM `tarun`.`my_scope`.`collection1` WHERE IS_ARRAY(poolId)=FALSE and state='available' UNION ALL SELECT poolId FROM `tarun`.`my_scope`.`collection1` UNNEST poolId where `collection1`.state = 'available'  ) AS pools group by poolId
+2023-06-23 10:35:39,061 Label is ['pool="12hrreg"']
+2023-06-23 10:35:39,061 Label is ['pool="regression"']
+2023-06-23 10:35:39,061 Label is ['pool="magnareg"']
+2023-06-23 10:35:39,062 Collecting metrics for memory_usage
+2023-06-23 10:35:39,062 Found CSV in Options
+2023-06-23 10:35:39,062 Collecting metrics for disk_usage
+2023-06-23 10:35:39,063 Found CSV in Options
+2023-06-23 10:35:39,063 Collecting metrics for cpu_load_avg_5mins
+2023-06-23 10:35:39,063 Found CSV in Options
+2023-06-23 10:35:39,063 Collecting metrics for vm_health_ssh_status
+2023-06-23 10:35:39,064 Found CSV in Options
+2023-06-23 10:35:39,065 172.16.238.13 - - [23/Jun/2023 10:35:39] "GET /metrics HTTP/1.1" 200 -
+2023-06-23 10:36:39,000 --Test--
+2023-06-23 10:36:39,000 ----Details Started----
+2023-06-23 10:36:39,001 static_vms
+2023-06-23 10:36:39,001 {'host': 'localhost', 'username': 'Administrator', 'password': 'password'}
+2023-06-23 10:36:39,001 ----Details Ended----
+2023-06-23 10:36:39,002 --Connecting to Below Cluster with Hard Coded---
+2023-06-23 10:36:39,041 --Bucket Set---
+2023-06-23 10:36:39,043 --Query Set---
+2023-06-23 10:36:39,048 Found row: {'pool': 'regression'}
+2023-06-23 10:36:39,049 Found row: {'pool': 'regression'}
+2023-06-23 10:36:39,049 Found row: {'pool': 'magnareg'}
+2023-06-23 10:36:39,049 Found row: {'pool': '12hrreg'}
+2023-06-23 10:36:39,050 Found row: {'pool': '12hrreg'}
+2023-06-23 10:36:39,050 Found row: {'pool': '12hrreg'}
+2023-06-23 10:36:39,050 Found row: {'pool': '12hrreg'}
+2023-06-23 10:36:39,051 Found row: {'pool': '12hrreg'}
+2023-06-23 10:36:39,051 Found row: {'pool': 'magnareg'}
+2023-06-23 10:36:39,051 Found row: {'pool': 'magnareg'}
+2023-06-23 10:36:39,052 Connected to localhost
+2023-06-23 10:36:39,052 Collecting metrics for available_vms
+2023-06-23 10:36:39,052 Found Cluster in Options
+2023-06-23 10:36:39,053 Cluster Name static_vms
+2023-06-23 10:36:39,053 Query Name SELECT poolId as `pool`, COUNT(*) AS count FROM (SELECT poolId FROM `tarun`.`my_scope`.`collection1` WHERE IS_ARRAY(poolId)=FALSE and state='available' UNION ALL SELECT poolId FROM `tarun`.`my_scope`.`collection1` UNNEST poolId where `collection1`.state = 'available'  ) AS pools group by poolId
+2023-06-23 10:36:39,059 Label is ['pool="regression"']
+2023-06-23 10:36:39,059 Label is ['pool="magnareg"']
+2023-06-23 10:36:39,059 Label is ['pool="12hrreg"']
+2023-06-23 10:36:39,060 Collecting metrics for memory_usage
+2023-06-23 10:36:39,060 Found CSV in Options
+2023-06-23 10:36:39,060 Collecting metrics for disk_usage
+2023-06-23 10:36:39,060 Found CSV in Options
+2023-06-23 10:36:39,061 Collecting metrics for cpu_load_avg_5mins
+2023-06-23 10:36:39,061 Found CSV in Options
+2023-06-23 10:36:39,061 Collecting metrics for vm_health_ssh_status
+2023-06-23 10:36:39,061 Found CSV in Options
+2023-06-23 10:36:39,063 172.16.238.13 - - [23/Jun/2023 10:36:39] "GET /metrics HTTP/1.1" 200 -
+2023-06-23 10:37:39,000 --Test--
+2023-06-23 10:37:39,000 ----Details Started----
+2023-06-23 10:37:39,001 static_vms
+2023-06-23 10:37:39,001 {'host': 'localhost', 'username': 'Administrator', 'password': 'password'}
+2023-06-23 10:37:39,001 ----Details Ended----
+2023-06-23 10:37:39,002 --Connecting to Below Cluster with Hard Coded---
+2023-06-23 10:37:39,035 --Bucket Set---
+2023-06-23 10:37:39,038 --Query Set---
+2023-06-23 10:37:39,045 Found row: {'pool': 'regression'}
+2023-06-23 10:37:39,046 Found row: {'pool': 'regression'}
+2023-06-23 10:37:39,046 Found row: {'pool': 'magnareg'}
+2023-06-23 10:37:39,046 Found row: {'pool': '12hrreg'}
+2023-06-23 10:37:39,047 Found row: {'pool': '12hrreg'}
+2023-06-23 10:37:39,047 Found row: {'pool': '12hrreg'}
+2023-06-23 10:37:39,047 Found row: {'pool': '12hrreg'}
+2023-06-23 10:37:39,048 Found row: {'pool': '12hrreg'}
+2023-06-23 10:37:39,048 Found row: {'pool': 'magnareg'}
+2023-06-23 10:37:39,048 Found row: {'pool': 'magnareg'}
+2023-06-23 10:37:39,048 Connected to localhost
+2023-06-23 10:37:39,049 Collecting metrics for available_vms
+2023-06-23 10:37:39,049 Found Cluster in Options
+2023-06-23 10:37:39,049 Cluster Name static_vms
+2023-06-23 10:37:39,050 Query Name SELECT poolId as `pool`, COUNT(*) AS count FROM (SELECT poolId FROM `tarun`.`my_scope`.`collection1` WHERE IS_ARRAY(poolId)=FALSE and state='available' UNION ALL SELECT poolId FROM `tarun`.`my_scope`.`collection1` UNNEST poolId where `collection1`.state = 'available'  ) AS pools group by poolId
+2023-06-23 10:37:39,056 Label is ['pool="regression"']
+2023-06-23 10:37:39,057 Label is ['pool="magnareg"']
+2023-06-23 10:37:39,057 Label is ['pool="12hrreg"']
+2023-06-23 10:37:39,057 Collecting metrics for memory_usage
+2023-06-23 10:37:39,058 Found CSV in Options
+2023-06-23 10:37:39,058 Collecting metrics for disk_usage
+2023-06-23 10:37:39,059 Found CSV in Options
+2023-06-23 10:37:39,059 Collecting metrics for cpu_load_avg_5mins
+2023-06-23 10:37:39,059 Found CSV in Options
+2023-06-23 10:37:39,060 Collecting metrics for vm_health_ssh_status
+2023-06-23 10:37:39,060 Found CSV in Options
+2023-06-23 10:37:39,062 172.16.238.13 - - [23/Jun/2023 10:37:39] "GET /metrics HTTP/1.1" 200 -
+2023-06-23 10:38:39,000 --Test--
+2023-06-23 10:38:39,001 ----Details Started----
+2023-06-23 10:38:39,001 static_vms
+2023-06-23 10:38:39,002 {'host': 'localhost', 'username': 'Administrator', 'password': 'password'}
+2023-06-23 10:38:39,002 ----Details Ended----
+2023-06-23 10:38:39,002 --Connecting to Below Cluster with Hard Coded---
+2023-06-23 10:38:39,042 --Bucket Set---
+2023-06-23 10:38:39,045 --Query Set---
+2023-06-23 10:38:39,051 Found row: {'pool': 'regression'}
+2023-06-23 10:38:39,051 Found row: {'pool': 'regression'}
+2023-06-23 10:38:39,052 Found row: {'pool': 'magnareg'}
+2023-06-23 10:38:39,052 Found row: {'pool': '12hrreg'}
+2023-06-23 10:38:39,052 Found row: {'pool': '12hrreg'}
+2023-06-23 10:38:39,053 Found row: {'pool': '12hrreg'}
+2023-06-23 10:38:39,053 Found row: {'pool': '12hrreg'}
+2023-06-23 10:38:39,054 Found row: {'pool': '12hrreg'}
+2023-06-23 10:38:39,054 Found row: {'pool': 'magnareg'}
+2023-06-23 10:38:39,054 Found row: {'pool': 'magnareg'}
+2023-06-23 10:38:39,055 Connected to localhost
+2023-06-23 10:38:39,055 Collecting metrics for available_vms
+2023-06-23 10:38:39,055 Found Cluster in Options
+2023-06-23 10:38:39,056 Cluster Name static_vms
+2023-06-23 10:38:39,056 Query Name SELECT poolId as `pool`, COUNT(*) AS count FROM (SELECT poolId FROM `tarun`.`my_scope`.`collection1` WHERE IS_ARRAY(poolId)=FALSE and state='available' UNION ALL SELECT poolId FROM `tarun`.`my_scope`.`collection1` UNNEST poolId where `collection1`.state = 'available'  ) AS pools group by poolId
+2023-06-23 10:38:39,064 Label is ['pool="regression"']
+2023-06-23 10:38:39,064 Label is ['pool="magnareg"']
+2023-06-23 10:38:39,065 Label is ['pool="12hrreg"']
+2023-06-23 10:38:39,065 Collecting metrics for memory_usage
+2023-06-23 10:38:39,065 Found CSV in Options
+2023-06-23 10:38:39,066 Collecting metrics for disk_usage
+2023-06-23 10:38:39,066 Found CSV in Options
+2023-06-23 10:38:39,066 Collecting metrics for cpu_load_avg_5mins
+2023-06-23 10:38:39,067 Found CSV in Options
+2023-06-23 10:38:39,067 Collecting metrics for vm_health_ssh_status
+2023-06-23 10:38:39,067 Found CSV in Options
+2023-06-23 10:38:39,069 172.16.238.13 - - [23/Jun/2023 10:38:39] "GET /metrics HTTP/1.1" 200 -
+2023-06-23 10:39:38,999 --Test--
+2023-06-23 10:39:39,000 ----Details Started----
+2023-06-23 10:39:39,000 static_vms
+2023-06-23 10:39:39,001 {'host': 'localhost', 'username': 'Administrator', 'password': 'password'}
+2023-06-23 10:39:39,001 ----Details Ended----
+2023-06-23 10:39:39,002 --Connecting to Below Cluster with Hard Coded---
+2023-06-23 10:39:39,054 --Bucket Set---
+2023-06-23 10:39:39,057 --Query Set---
+2023-06-23 10:39:39,063 Found row: {'pool': 'regression'}
+2023-06-23 10:39:39,064 Found row: {'pool': 'regression'}
+2023-06-23 10:39:39,064 Found row: {'pool': 'magnareg'}
+2023-06-23 10:39:39,064 Found row: {'pool': '12hrreg'}
+2023-06-23 10:39:39,065 Found row: {'pool': '12hrreg'}
+2023-06-23 10:39:39,065 Found row: {'pool': '12hrreg'}
+2023-06-23 10:39:39,065 Found row: {'pool': '12hrreg'}
+2023-06-23 10:39:39,067 Found row: {'pool': '12hrreg'}
+2023-06-23 10:39:39,067 Found row: {'pool': 'magnareg'}
+2023-06-23 10:39:39,068 Found row: {'pool': 'magnareg'}
+2023-06-23 10:39:39,068 Connected to localhost
+2023-06-23 10:39:39,068 Collecting metrics for available_vms
+2023-06-23 10:39:39,068 Found Cluster in Options
+2023-06-23 10:39:39,069 Cluster Name static_vms
+2023-06-23 10:39:39,069 Query Name SELECT poolId as `pool`, COUNT(*) AS count FROM (SELECT poolId FROM `tarun`.`my_scope`.`collection1` WHERE IS_ARRAY(poolId)=FALSE and state='available' UNION ALL SELECT poolId FROM `tarun`.`my_scope`.`collection1` UNNEST poolId where `collection1`.state = 'available'  ) AS pools group by poolId
+2023-06-23 10:39:39,076 Label is ['pool="magnareg"']
+2023-06-23 10:39:39,076 Label is ['pool="12hrreg"']
+2023-06-23 10:39:39,077 Label is ['pool="regression"']
+2023-06-23 10:39:39,077 Collecting metrics for memory_usage
+2023-06-23 10:39:39,077 Found CSV in Options
+2023-06-23 10:39:39,078 Collecting metrics for disk_usage
+2023-06-23 10:39:39,078 Found CSV in Options
+2023-06-23 10:39:39,078 Collecting metrics for cpu_load_avg_5mins
+2023-06-23 10:39:39,078 Found CSV in Options
+2023-06-23 10:39:39,079 Collecting metrics for vm_health_ssh_status
+2023-06-23 10:39:39,079 Found CSV in Options
+2023-06-23 10:39:39,081 172.16.238.13 - - [23/Jun/2023 10:39:39] "GET /metrics HTTP/1.1" 200 -
+2023-06-23 10:40:39,000 --Test--
+2023-06-23 10:40:39,001 ----Details Started----
+2023-06-23 10:40:39,001 static_vms
+2023-06-23 10:40:39,001 {'host': 'localhost', 'username': 'Administrator', 'password': 'password'}
+2023-06-23 10:40:39,002 ----Details Ended----
+2023-06-23 10:40:39,002 --Connecting to Below Cluster with Hard Coded---
+2023-06-23 10:40:39,052 --Bucket Set---
+2023-06-23 10:40:39,055 --Query Set---
+2023-06-23 10:40:39,060 Found row: {'pool': 'regression'}
+2023-06-23 10:40:39,061 Found row: {'pool': 'regression'}
+2023-06-23 10:40:39,061 Found row: {'pool': 'magnareg'}
+2023-06-23 10:40:39,061 Found row: {'pool': '12hrreg'}
+2023-06-23 10:40:39,062 Found row: {'pool': '12hrreg'}
+2023-06-23 10:40:39,062 Found row: {'pool': '12hrreg'}
+2023-06-23 10:40:39,062 Found row: {'pool': '12hrreg'}
+2023-06-23 10:40:39,062 Found row: {'pool': '12hrreg'}
+2023-06-23 10:40:39,062 Found row: {'pool': 'magnareg'}
+2023-06-23 10:40:39,063 Found row: {'pool': 'magnareg'}
+2023-06-23 10:40:39,063 Connected to localhost
+2023-06-23 10:40:39,063 Collecting metrics for available_vms
+2023-06-23 10:40:39,063 Found Cluster in Options
+2023-06-23 10:40:39,064 Cluster Name static_vms
+2023-06-23 10:40:39,064 Query Name SELECT poolId as `pool`, COUNT(*) AS count FROM (SELECT poolId FROM `tarun`.`my_scope`.`collection1` WHERE IS_ARRAY(poolId)=FALSE and state='available' UNION ALL SELECT poolId FROM `tarun`.`my_scope`.`collection1` UNNEST poolId where `collection1`.state = 'available'  ) AS pools group by poolId
+2023-06-23 10:40:39,070 Label is ['pool="magnareg"']
+2023-06-23 10:40:39,070 Label is ['pool="12hrreg"']
+2023-06-23 10:40:39,070 Label is ['pool="regression"']
+2023-06-23 10:40:39,070 Collecting metrics for memory_usage
+2023-06-23 10:40:39,071 Found CSV in Options
+2023-06-23 10:40:39,071 Collecting metrics for disk_usage
+2023-06-23 10:40:39,071 Found CSV in Options
+2023-06-23 10:40:39,072 Collecting metrics for cpu_load_avg_5mins
+2023-06-23 10:40:39,072 Found CSV in Options
+2023-06-23 10:40:39,072 Collecting metrics for vm_health_ssh_status
+2023-06-23 10:40:39,072 Found CSV in Options
+2023-06-23 10:40:39,074 172.16.238.13 - - [23/Jun/2023 10:40:39] "GET /metrics HTTP/1.1" 200 -
+2023-06-23 10:41:38,999 --Test--
+2023-06-23 10:41:38,999 ----Details Started----
+2023-06-23 10:41:39,000 static_vms
+2023-06-23 10:41:39,000 {'host': 'localhost', 'username': 'Administrator', 'password': 'password'}
+2023-06-23 10:41:39,001 ----Details Ended----
+2023-06-23 10:41:39,001 --Connecting to Below Cluster with Hard Coded---
+2023-06-23 10:41:39,043 --Bucket Set---
+2023-06-23 10:41:39,046 --Query Set---
+2023-06-23 10:41:39,053 Found row: {'pool': 'regression'}
+2023-06-23 10:41:39,053 Found row: {'pool': 'regression'}
+2023-06-23 10:41:39,054 Found row: {'pool': 'magnareg'}
+2023-06-23 10:41:39,054 Found row: {'pool': '12hrreg'}
+2023-06-23 10:41:39,054 Found row: {'pool': '12hrreg'}
+2023-06-23 10:41:39,056 Found row: {'pool': '12hrreg'}
+2023-06-23 10:41:39,056 Found row: {'pool': '12hrreg'}
+2023-06-23 10:41:39,056 Found row: {'pool': '12hrreg'}
+2023-06-23 10:41:39,057 Found row: {'pool': 'magnareg'}
+2023-06-23 10:41:39,057 Found row: {'pool': 'magnareg'}
+2023-06-23 10:41:39,057 Connected to localhost
+2023-06-23 10:41:39,057 Collecting metrics for available_vms
+2023-06-23 10:41:39,058 Found Cluster in Options
+2023-06-23 10:41:39,058 Cluster Name static_vms
+2023-06-23 10:41:39,058 Query Name SELECT poolId as `pool`, COUNT(*) AS count FROM (SELECT poolId FROM `tarun`.`my_scope`.`collection1` WHERE IS_ARRAY(poolId)=FALSE and state='available' UNION ALL SELECT poolId FROM `tarun`.`my_scope`.`collection1` UNNEST poolId where `collection1`.state = 'available'  ) AS pools group by poolId
+2023-06-23 10:41:39,065 Label is ['pool="magnareg"']
+2023-06-23 10:41:39,065 Label is ['pool="12hrreg"']
+2023-06-23 10:41:39,065 Label is ['pool="regression"']
+2023-06-23 10:41:39,066 Collecting metrics for memory_usage
+2023-06-23 10:41:39,066 Found CSV in Options
+2023-06-23 10:41:39,067 Collecting metrics for disk_usage
+2023-06-23 10:41:39,067 Found CSV in Options
+2023-06-23 10:41:39,068 Collecting metrics for cpu_load_avg_5mins
+2023-06-23 10:41:39,068 Found CSV in Options
+2023-06-23 10:41:39,068 Collecting metrics for vm_health_ssh_status
+2023-06-23 10:41:39,069 Found CSV in Options
+2023-06-23 10:41:39,070 172.16.238.13 - - [23/Jun/2023 10:41:39] "GET /metrics HTTP/1.1" 200 -
+2023-06-23 10:42:39,002 --Test--
+2023-06-23 10:42:39,003 ----Details Started----
+2023-06-23 10:42:39,004 static_vms
+2023-06-23 10:42:39,005 {'host': 'localhost', 'username': 'Administrator', 'password': 'password'}
+2023-06-23 10:42:39,006 ----Details Ended----
+2023-06-23 10:42:39,007 --Connecting to Below Cluster with Hard Coded---
+2023-06-23 10:42:39,066 --Bucket Set---
+2023-06-23 10:42:39,069 --Query Set---
+2023-06-23 10:42:39,075 Found row: {'pool': 'regression'}
+2023-06-23 10:42:39,076 Found row: {'pool': 'regression'}
+2023-06-23 10:42:39,076 Found row: {'pool': 'magnareg'}
+2023-06-23 10:42:39,077 Found row: {'pool': '12hrreg'}
+2023-06-23 10:42:39,077 Found row: {'pool': '12hrreg'}
+2023-06-23 10:42:39,078 Found row: {'pool': '12hrreg'}
+2023-06-23 10:42:39,078 Found row: {'pool': '12hrreg'}
+2023-06-23 10:42:39,078 Found row: {'pool': '12hrreg'}
+2023-06-23 10:42:39,079 Found row: {'pool': 'magnareg'}
+2023-06-23 10:42:39,079 Found row: {'pool': 'magnareg'}
+2023-06-23 10:42:39,079 Connected to localhost
+2023-06-23 10:42:39,080 Collecting metrics for available_vms
+2023-06-23 10:42:39,080 Found Cluster in Options
+2023-06-23 10:42:39,080 Cluster Name static_vms
+2023-06-23 10:42:39,081 Query Name SELECT poolId as `pool`, COUNT(*) AS count FROM (SELECT poolId FROM `tarun`.`my_scope`.`collection1` WHERE IS_ARRAY(poolId)=FALSE and state='available' UNION ALL SELECT poolId FROM `tarun`.`my_scope`.`collection1` UNNEST poolId where `collection1`.state = 'available'  ) AS pools group by poolId
+2023-06-23 10:42:39,087 Label is ['pool="regression"']
+2023-06-23 10:42:39,087 Label is ['pool="magnareg"']
+2023-06-23 10:42:39,088 Label is ['pool="12hrreg"']
+2023-06-23 10:42:39,088 Collecting metrics for memory_usage
+2023-06-23 10:42:39,088 Found CSV in Options
+2023-06-23 10:42:39,089 Collecting metrics for disk_usage
+2023-06-23 10:42:39,089 Found CSV in Options
+2023-06-23 10:42:39,089 Collecting metrics for cpu_load_avg_5mins
+2023-06-23 10:42:39,090 Found CSV in Options
+2023-06-23 10:42:39,090 Collecting metrics for vm_health_ssh_status
+2023-06-23 10:42:39,090 Found CSV in Options
+2023-06-23 10:42:39,092 172.16.238.13 - - [23/Jun/2023 10:42:39] "GET /metrics HTTP/1.1" 200 -
+2023-06-23 10:43:39,002 --Test--
+2023-06-23 10:43:39,003 ----Details Started----
+2023-06-23 10:43:39,003 static_vms
+2023-06-23 10:43:39,004 {'host': 'localhost', 'username': 'Administrator', 'password': 'password'}
+2023-06-23 10:43:39,005 ----Details Ended----
+2023-06-23 10:43:39,006 --Connecting to Below Cluster with Hard Coded---
+2023-06-23 10:43:39,057 --Bucket Set---
+2023-06-23 10:43:39,060 --Query Set---
+2023-06-23 10:43:39,066 Found row: {'pool': 'regression'}
+2023-06-23 10:43:39,067 Found row: {'pool': 'regression'}
+2023-06-23 10:43:39,067 Found row: {'pool': 'magnareg'}
+2023-06-23 10:43:39,068 Found row: {'pool': '12hrreg'}
+2023-06-23 10:43:39,068 Found row: {'pool': '12hrreg'}
+2023-06-23 10:43:39,068 Found row: {'pool': '12hrreg'}
+2023-06-23 10:43:39,068 Found row: {'pool': '12hrreg'}
+2023-06-23 10:43:39,069 Found row: {'pool': '12hrreg'}
+2023-06-23 10:43:39,069 Found row: {'pool': 'magnareg'}
+2023-06-23 10:43:39,069 Found row: {'pool': 'magnareg'}
+2023-06-23 10:43:39,069 Connected to localhost
+2023-06-23 10:43:39,070 Collecting metrics for available_vms
+2023-06-23 10:43:39,070 Found Cluster in Options
+2023-06-23 10:43:39,070 Cluster Name static_vms
+2023-06-23 10:43:39,071 Query Name SELECT poolId as `pool`, COUNT(*) AS count FROM (SELECT poolId FROM `tarun`.`my_scope`.`collection1` WHERE IS_ARRAY(poolId)=FALSE and state='available' UNION ALL SELECT poolId FROM `tarun`.`my_scope`.`collection1` UNNEST poolId where `collection1`.state = 'available'  ) AS pools group by poolId
+2023-06-23 10:43:39,076 Label is ['pool="magnareg"']
+2023-06-23 10:43:39,076 Label is ['pool="12hrreg"']
+2023-06-23 10:43:39,076 Label is ['pool="regression"']
+2023-06-23 10:43:39,076 Collecting metrics for memory_usage
+2023-06-23 10:43:39,077 Found CSV in Options
+2023-06-23 10:43:39,077 Collecting metrics for disk_usage
+2023-06-23 10:43:39,077 Found CSV in Options
+2023-06-23 10:43:39,078 Collecting metrics for cpu_load_avg_5mins
+2023-06-23 10:43:39,078 Found CSV in Options
+2023-06-23 10:43:39,078 Collecting metrics for vm_health_ssh_status
+2023-06-23 10:43:39,078 Found CSV in Options
+2023-06-23 10:43:39,080 172.16.238.13 - - [23/Jun/2023 10:43:39] "GET /metrics HTTP/1.1" 200 -
+2023-06-23 10:44:39,000 --Test--
+2023-06-23 10:44:39,001 ----Details Started----
+2023-06-23 10:44:39,001 static_vms
+2023-06-23 10:44:39,002 {'host': 'localhost', 'username': 'Administrator', 'password': 'password'}
+2023-06-23 10:44:39,002 ----Details Ended----
+2023-06-23 10:44:39,003 --Connecting to Below Cluster with Hard Coded---
+2023-06-23 10:44:39,052 --Bucket Set---
+2023-06-23 10:44:39,054 --Query Set---
+2023-06-23 10:44:39,058 Found row: {'pool': 'regression'}
+2023-06-23 10:44:39,058 Found row: {'pool': 'regression'}
+2023-06-23 10:44:39,058 Found row: {'pool': 'magnareg'}
+2023-06-23 10:44:39,059 Found row: {'pool': '12hrreg'}
+2023-06-23 10:44:39,059 Found row: {'pool': '12hrreg'}
+2023-06-23 10:44:39,059 Found row: {'pool': '12hrreg'}
+2023-06-23 10:44:39,060 Found row: {'pool': '12hrreg'}
+2023-06-23 10:44:39,060 Found row: {'pool': '12hrreg'}
+2023-06-23 10:44:39,060 Found row: {'pool': 'magnareg'}
+2023-06-23 10:44:39,060 Found row: {'pool': 'magnareg'}
+2023-06-23 10:44:39,061 Connected to localhost
+2023-06-23 10:44:39,061 Collecting metrics for available_vms
+2023-06-23 10:44:39,061 Found Cluster in Options
+2023-06-23 10:44:39,062 Cluster Name static_vms
+2023-06-23 10:44:39,062 Query Name SELECT poolId as `pool`, COUNT(*) AS count FROM (SELECT poolId FROM `tarun`.`my_scope`.`collection1` WHERE IS_ARRAY(poolId)=FALSE and state='available' UNION ALL SELECT poolId FROM `tarun`.`my_scope`.`collection1` UNNEST poolId where `collection1`.state = 'available'  ) AS pools group by poolId
+2023-06-23 10:44:39,067 Label is ['pool="regression"']
+2023-06-23 10:44:39,068 Label is ['pool="magnareg"']
+2023-06-23 10:44:39,068 Label is ['pool="12hrreg"']
+2023-06-23 10:44:39,068 Collecting metrics for memory_usage
+2023-06-23 10:44:39,068 Found CSV in Options
+2023-06-23 10:44:39,069 Collecting metrics for disk_usage
+2023-06-23 10:44:39,069 Found CSV in Options
+2023-06-23 10:44:39,069 Collecting metrics for cpu_load_avg_5mins
+2023-06-23 10:44:39,070 Found CSV in Options
+2023-06-23 10:44:39,070 Collecting metrics for vm_health_ssh_status
+2023-06-23 10:44:39,070 Found CSV in Options
+2023-06-23 10:44:39,072 172.16.238.13 - - [23/Jun/2023 10:44:39] "GET /metrics HTTP/1.1" 200 -
+2023-06-23 10:45:39,002 --Test--
+2023-06-23 10:45:39,003 ----Details Started----
+2023-06-23 10:45:39,004 static_vms
+2023-06-23 10:45:39,005 {'host': 'localhost', 'username': 'Administrator', 'password': 'password'}
+2023-06-23 10:45:39,006 ----Details Ended----
+2023-06-23 10:45:39,007 --Connecting to Below Cluster with Hard Coded---
+2023-06-23 10:45:39,087 --Bucket Set---
+2023-06-23 10:45:39,089 --Query Set---
+2023-06-23 10:45:39,093 Found row: {'pool': 'regression'}
+2023-06-23 10:45:39,094 Found row: {'pool': 'regression'}
+2023-06-23 10:45:39,094 Found row: {'pool': 'magnareg'}
+2023-06-23 10:45:39,094 Found row: {'pool': '12hrreg'}
+2023-06-23 10:45:39,095 Found row: {'pool': '12hrreg'}
+2023-06-23 10:45:39,095 Found row: {'pool': '12hrreg'}
+2023-06-23 10:45:39,095 Found row: {'pool': '12hrreg'}
+2023-06-23 10:45:39,095 Found row: {'pool': '12hrreg'}
+2023-06-23 10:45:39,095 Found row: {'pool': 'magnareg'}
+2023-06-23 10:45:39,096 Found row: {'pool': 'magnareg'}
+2023-06-23 10:45:39,096 Connected to localhost
+2023-06-23 10:45:39,096 Collecting metrics for available_vms
+2023-06-23 10:45:39,096 Found Cluster in Options
+2023-06-23 10:45:39,097 Cluster Name static_vms
+2023-06-23 10:45:39,097 Query Name SELECT poolId as `pool`, COUNT(*) AS count FROM (SELECT poolId FROM `tarun`.`my_scope`.`collection1` WHERE IS_ARRAY(poolId)=FALSE and state='available' UNION ALL SELECT poolId FROM `tarun`.`my_scope`.`collection1` UNNEST poolId where `collection1`.state = 'available'  ) AS pools group by poolId
+2023-06-23 10:45:39,102 Label is ['pool="regression"']
+2023-06-23 10:45:39,102 Label is ['pool="magnareg"']
+2023-06-23 10:45:39,102 Label is ['pool="12hrreg"']
+2023-06-23 10:45:39,103 Collecting metrics for memory_usage
+2023-06-23 10:45:39,103 Found CSV in Options
+2023-06-23 10:45:39,103 Collecting metrics for disk_usage
+2023-06-23 10:45:39,103 Found CSV in Options
+2023-06-23 10:45:39,104 Collecting metrics for cpu_load_avg_5mins
+2023-06-23 10:45:39,104 Found CSV in Options
+2023-06-23 10:45:39,104 Collecting metrics for vm_health_ssh_status
+2023-06-23 10:45:39,104 Found CSV in Options
+2023-06-23 10:45:39,106 172.16.238.13 - - [23/Jun/2023 10:45:39] "GET /metrics HTTP/1.1" 200 -
+2023-06-23 10:46:38,998 --Test--
+2023-06-23 10:46:38,999 ----Details Started----
+2023-06-23 10:46:38,999 static_vms
+2023-06-23 10:46:38,999 {'host': 'localhost', 'username': 'Administrator', 'password': 'password'}
+2023-06-23 10:46:39,000 ----Details Ended----
+2023-06-23 10:46:39,000 --Connecting to Below Cluster with Hard Coded---
+2023-06-23 10:46:39,040 --Bucket Set---
+2023-06-23 10:46:39,042 --Query Set---
+2023-06-23 10:46:39,046 Found row: {'pool': 'regression'}
+2023-06-23 10:46:39,047 Found row: {'pool': 'regression'}
+2023-06-23 10:46:39,047 Found row: {'pool': 'magnareg'}
+2023-06-23 10:46:39,048 Found row: {'pool': '12hrreg'}
+2023-06-23 10:46:39,048 Found row: {'pool': '12hrreg'}
+2023-06-23 10:46:39,048 Found row: {'pool': '12hrreg'}
+2023-06-23 10:46:39,048 Found row: {'pool': '12hrreg'}
+2023-06-23 10:46:39,049 Found row: {'pool': '12hrreg'}
+2023-06-23 10:46:39,049 Found row: {'pool': 'magnareg'}
+2023-06-23 10:46:39,049 Found row: {'pool': 'magnareg'}
+2023-06-23 10:46:39,049 Connected to localhost
+2023-06-23 10:46:39,050 Collecting metrics for available_vms
+2023-06-23 10:46:39,050 Found Cluster in Options
+2023-06-23 10:46:39,050 Cluster Name static_vms
+2023-06-23 10:46:39,051 Query Name SELECT poolId as `pool`, COUNT(*) AS count FROM (SELECT poolId FROM `tarun`.`my_scope`.`collection1` WHERE IS_ARRAY(poolId)=FALSE and state='available' UNION ALL SELECT poolId FROM `tarun`.`my_scope`.`collection1` UNNEST poolId where `collection1`.state = 'available'  ) AS pools group by poolId
+2023-06-23 10:46:39,056 Label is ['pool="regression"']
+2023-06-23 10:46:39,057 Label is ['pool="magnareg"']
+2023-06-23 10:46:39,057 Label is ['pool="12hrreg"']
+2023-06-23 10:46:39,057 Collecting metrics for memory_usage
+2023-06-23 10:46:39,058 Found CSV in Options
+2023-06-23 10:46:39,058 Collecting metrics for disk_usage
+2023-06-23 10:46:39,058 Found CSV in Options
+2023-06-23 10:46:39,059 Collecting metrics for cpu_load_avg_5mins
+2023-06-23 10:46:39,059 Found CSV in Options
+2023-06-23 10:46:39,059 Collecting metrics for vm_health_ssh_status
+2023-06-23 10:46:39,059 Found CSV in Options
+2023-06-23 10:46:39,061 172.16.238.13 - - [23/Jun/2023 10:46:39] "GET /metrics HTTP/1.1" 200 -
+2023-06-23 10:47:39,000 --Test--
+2023-06-23 10:47:39,000 ----Details Started----
+2023-06-23 10:47:39,001 static_vms
+2023-06-23 10:47:39,001 {'host': 'localhost', 'username': 'Administrator', 'password': 'password'}
+2023-06-23 10:47:39,001 ----Details Ended----
+2023-06-23 10:47:39,001 --Connecting to Below Cluster with Hard Coded---
+2023-06-23 10:47:39,051 --Bucket Set---
+2023-06-23 10:47:39,053 --Query Set---
+2023-06-23 10:47:39,058 Found row: {'pool': 'regression'}
+2023-06-23 10:47:39,059 Found row: {'pool': 'regression'}
+2023-06-23 10:47:39,059 Found row: {'pool': 'magnareg'}
+2023-06-23 10:47:39,059 Found row: {'pool': '12hrreg'}
+2023-06-23 10:47:39,060 Found row: {'pool': '12hrreg'}
+2023-06-23 10:47:39,060 Found row: {'pool': '12hrreg'}
+2023-06-23 10:47:39,060 Found row: {'pool': '12hrreg'}
+2023-06-23 10:47:39,061 Found row: {'pool': '12hrreg'}
+2023-06-23 10:47:39,061 Found row: {'pool': 'magnareg'}
+2023-06-23 10:47:39,061 Found row: {'pool': 'magnareg'}
+2023-06-23 10:47:39,061 Connected to localhost
+2023-06-23 10:47:39,062 Collecting metrics for available_vms
+2023-06-23 10:47:39,062 Found Cluster in Options
+2023-06-23 10:47:39,063 Cluster Name static_vms
+2023-06-23 10:47:39,063 Query Name SELECT poolId as `pool`, COUNT(*) AS count FROM (SELECT poolId FROM `tarun`.`my_scope`.`collection1` WHERE IS_ARRAY(poolId)=FALSE and state='available' UNION ALL SELECT poolId FROM `tarun`.`my_scope`.`collection1` UNNEST poolId where `collection1`.state = 'available'  ) AS pools group by poolId
+2023-06-23 10:47:39,069 Label is ['pool="regression"']
+2023-06-23 10:47:39,069 Label is ['pool="magnareg"']
+2023-06-23 10:47:39,070 Label is ['pool="12hrreg"']
+2023-06-23 10:47:39,070 Collecting metrics for memory_usage
+2023-06-23 10:47:39,070 Found CSV in Options
+2023-06-23 10:47:39,070 Collecting metrics for disk_usage
+2023-06-23 10:47:39,071 Found CSV in Options
+2023-06-23 10:47:39,071 Collecting metrics for cpu_load_avg_5mins
+2023-06-23 10:47:39,071 Found CSV in Options
+2023-06-23 10:47:39,071 Collecting metrics for vm_health_ssh_status
+2023-06-23 10:47:39,072 Found CSV in Options
+2023-06-23 10:47:39,073 172.16.238.13 - - [23/Jun/2023 10:47:39] "GET /metrics HTTP/1.1" 200 -
+2023-06-23 10:48:39,000 --Test--
+2023-06-23 10:48:39,001 ----Details Started----
+2023-06-23 10:48:39,001 static_vms
+2023-06-23 10:48:39,002 {'host': 'localhost', 'username': 'Administrator', 'password': 'password'}
+2023-06-23 10:48:39,002 ----Details Ended----
+2023-06-23 10:48:39,002 --Connecting to Below Cluster with Hard Coded---
+2023-06-23 10:48:39,039 --Bucket Set---
+2023-06-23 10:48:39,041 --Query Set---
+2023-06-23 10:48:39,046 Found row: {'pool': 'regression'}
+2023-06-23 10:48:39,047 Found row: {'pool': 'regression'}
+2023-06-23 10:48:39,047 Found row: {'pool': 'magnareg'}
+2023-06-23 10:48:39,048 Found row: {'pool': '12hrreg'}
+2023-06-23 10:48:39,048 Found row: {'pool': '12hrreg'}
+2023-06-23 10:48:39,049 Found row: {'pool': '12hrreg'}
+2023-06-23 10:48:39,049 Found row: {'pool': '12hrreg'}
+2023-06-23 10:48:39,049 Found row: {'pool': '12hrreg'}
+2023-06-23 10:48:39,050 Found row: {'pool': 'magnareg'}
+2023-06-23 10:48:39,050 Found row: {'pool': 'magnareg'}
+2023-06-23 10:48:39,050 Connected to localhost
+2023-06-23 10:48:39,050 Collecting metrics for available_vms
+2023-06-23 10:48:39,051 Found Cluster in Options
+2023-06-23 10:48:39,051 Cluster Name static_vms
+2023-06-23 10:48:39,052 Query Name SELECT poolId as `pool`, COUNT(*) AS count FROM (SELECT poolId FROM `tarun`.`my_scope`.`collection1` WHERE IS_ARRAY(poolId)=FALSE and state='available' UNION ALL SELECT poolId FROM `tarun`.`my_scope`.`collection1` UNNEST poolId where `collection1`.state = 'available'  ) AS pools group by poolId
+2023-06-23 10:48:39,058 Label is ['pool="magnareg"']
+2023-06-23 10:48:39,058 Label is ['pool="12hrreg"']
+2023-06-23 10:48:39,058 Label is ['pool="regression"']
+2023-06-23 10:48:39,059 Collecting metrics for memory_usage
+2023-06-23 10:48:39,059 Found CSV in Options
+2023-06-23 10:48:39,059 Collecting metrics for disk_usage
+2023-06-23 10:48:39,060 Found CSV in Options
+2023-06-23 10:48:39,060 Collecting metrics for cpu_load_avg_5mins
+2023-06-23 10:48:39,060 Found CSV in Options
+2023-06-23 10:48:39,061 Collecting metrics for vm_health_ssh_status
+2023-06-23 10:48:39,061 Found CSV in Options
+2023-06-23 10:48:39,062 172.16.238.13 - - [23/Jun/2023 10:48:39] "GET /metrics HTTP/1.1" 200 -
+2023-06-23 10:49:39,000 --Test--
+2023-06-23 10:49:39,001 ----Details Started----
+2023-06-23 10:49:39,001 static_vms
+2023-06-23 10:49:39,001 {'host': 'localhost', 'username': 'Administrator', 'password': 'password'}
+2023-06-23 10:49:39,002 ----Details Ended----
+2023-06-23 10:49:39,002 --Connecting to Below Cluster with Hard Coded---
+2023-06-23 10:49:39,041 --Bucket Set---
+2023-06-23 10:49:39,043 --Query Set---
+2023-06-23 10:49:39,048 Found row: {'pool': 'regression'}
+2023-06-23 10:49:39,049 Found row: {'pool': 'regression'}
+2023-06-23 10:49:39,049 Found row: {'pool': 'magnareg'}
+2023-06-23 10:49:39,049 Found row: {'pool': '12hrreg'}
+2023-06-23 10:49:39,050 Found row: {'pool': '12hrreg'}
+2023-06-23 10:49:39,050 Found row: {'pool': '12hrreg'}
+2023-06-23 10:49:39,050 Found row: {'pool': '12hrreg'}
+2023-06-23 10:49:39,051 Found row: {'pool': '12hrreg'}
+2023-06-23 10:49:39,051 Found row: {'pool': 'magnareg'}
+2023-06-23 10:49:39,051 Found row: {'pool': 'magnareg'}
+2023-06-23 10:49:39,051 Connected to localhost
+2023-06-23 10:49:39,052 Collecting metrics for available_vms
+2023-06-23 10:49:39,052 Found Cluster in Options
+2023-06-23 10:49:39,052 Cluster Name static_vms
+2023-06-23 10:49:39,052 Query Name SELECT poolId as `pool`, COUNT(*) AS count FROM (SELECT poolId FROM `tarun`.`my_scope`.`collection1` WHERE IS_ARRAY(poolId)=FALSE and state='available' UNION ALL SELECT poolId FROM `tarun`.`my_scope`.`collection1` UNNEST poolId where `collection1`.state = 'available'  ) AS pools group by poolId
+2023-06-23 10:49:39,059 Label is ['pool="12hrreg"']
+2023-06-23 10:49:39,059 Label is ['pool="regression"']
+2023-06-23 10:49:39,060 Label is ['pool="magnareg"']
+2023-06-23 10:49:39,060 Collecting metrics for memory_usage
+2023-06-23 10:49:39,060 Found CSV in Options
+2023-06-23 10:49:39,061 Collecting metrics for disk_usage
+2023-06-23 10:49:39,061 Found CSV in Options
+2023-06-23 10:49:39,062 Collecting metrics for cpu_load_avg_5mins
+2023-06-23 10:49:39,062 Found CSV in Options
+2023-06-23 10:49:39,062 Collecting metrics for vm_health_ssh_status
+2023-06-23 10:49:39,062 Found CSV in Options
+2023-06-23 10:49:39,064 172.16.238.13 - - [23/Jun/2023 10:49:39] "GET /metrics HTTP/1.1" 200 -
+2023-06-23 10:50:38,999 --Test--
+2023-06-23 10:50:39,000 ----Details Started----
+2023-06-23 10:50:39,000 static_vms
+2023-06-23 10:50:39,000 {'host': 'localhost', 'username': 'Administrator', 'password': 'password'}
+2023-06-23 10:50:39,001 ----Details Ended----
+2023-06-23 10:50:39,001 --Connecting to Below Cluster with Hard Coded---
+2023-06-23 10:50:39,037 --Bucket Set---
+2023-06-23 10:50:39,039 --Query Set---
+2023-06-23 10:50:39,046 Found row: {'pool': 'regression'}
+2023-06-23 10:50:39,047 Found row: {'pool': 'regression'}
+2023-06-23 10:50:39,047 Found row: {'pool': 'magnareg'}
+2023-06-23 10:50:39,047 Found row: {'pool': '12hrreg'}
+2023-06-23 10:50:39,048 Found row: {'pool': '12hrreg'}
+2023-06-23 10:50:39,048 Found row: {'pool': '12hrreg'}
+2023-06-23 10:50:39,048 Found row: {'pool': '12hrreg'}
+2023-06-23 10:50:39,049 Found row: {'pool': '12hrreg'}
+2023-06-23 10:50:39,049 Found row: {'pool': 'magnareg'}
+2023-06-23 10:50:39,049 Found row: {'pool': 'magnareg'}
+2023-06-23 10:50:39,050 Connected to localhost
+2023-06-23 10:50:39,050 Collecting metrics for available_vms
+2023-06-23 10:50:39,050 Found Cluster in Options
+2023-06-23 10:50:39,051 Cluster Name static_vms
+2023-06-23 10:50:39,051 Query Name SELECT poolId as `pool`, COUNT(*) AS count FROM (SELECT poolId FROM `tarun`.`my_scope`.`collection1` WHERE IS_ARRAY(poolId)=FALSE and state='available' UNION ALL SELECT poolId FROM `tarun`.`my_scope`.`collection1` UNNEST poolId where `collection1`.state = 'available'  ) AS pools group by poolId
+2023-06-23 10:50:39,057 Label is ['pool="regression"']
+2023-06-23 10:50:39,057 Label is ['pool="magnareg"']
+2023-06-23 10:50:39,058 Label is ['pool="12hrreg"']
+2023-06-23 10:50:39,058 Collecting metrics for memory_usage
+2023-06-23 10:50:39,058 Found CSV in Options
+2023-06-23 10:50:39,059 Collecting metrics for disk_usage
+2023-06-23 10:50:39,059 Found CSV in Options
+2023-06-23 10:50:39,059 Collecting metrics for cpu_load_avg_5mins
+2023-06-23 10:50:39,060 Found CSV in Options
+2023-06-23 10:50:39,060 Collecting metrics for vm_health_ssh_status
+2023-06-23 10:50:39,060 Found CSV in Options
+2023-06-23 10:50:39,062 172.16.238.13 - - [23/Jun/2023 10:50:39] "GET /metrics HTTP/1.1" 200 -
+2023-06-23 10:51:38,999 --Test--
+2023-06-23 10:51:39,000 ----Details Started----
+2023-06-23 10:51:39,000 static_vms
+2023-06-23 10:51:39,001 {'host': 'localhost', 'username': 'Administrator', 'password': 'password'}
+2023-06-23 10:51:39,001 ----Details Ended----
+2023-06-23 10:51:39,002 --Connecting to Below Cluster with Hard Coded---
+2023-06-23 10:51:39,038 --Bucket Set---
+2023-06-23 10:51:39,040 --Query Set---
+2023-06-23 10:51:39,045 Found row: {'pool': 'regression'}
+2023-06-23 10:51:39,045 Found row: {'pool': 'regression'}
+2023-06-23 10:51:39,046 Found row: {'pool': 'magnareg'}
+2023-06-23 10:51:39,046 Found row: {'pool': '12hrreg'}
+2023-06-23 10:51:39,046 Found row: {'pool': '12hrreg'}
+2023-06-23 10:51:39,047 Found row: {'pool': '12hrreg'}
+2023-06-23 10:51:39,047 Found row: {'pool': '12hrreg'}
+2023-06-23 10:51:39,047 Found row: {'pool': '12hrreg'}
+2023-06-23 10:51:39,047 Found row: {'pool': 'magnareg'}
+2023-06-23 10:51:39,048 Found row: {'pool': 'magnareg'}
+2023-06-23 10:51:39,048 Connected to localhost
+2023-06-23 10:51:39,048 Collecting metrics for available_vms
+2023-06-23 10:51:39,048 Found Cluster in Options
+2023-06-23 10:51:39,049 Cluster Name static_vms
+2023-06-23 10:51:39,049 Query Name SELECT poolId as `pool`, COUNT(*) AS count FROM (SELECT poolId FROM `tarun`.`my_scope`.`collection1` WHERE IS_ARRAY(poolId)=FALSE and state='available' UNION ALL SELECT poolId FROM `tarun`.`my_scope`.`collection1` UNNEST poolId where `collection1`.state = 'available'  ) AS pools group by poolId
+2023-06-23 10:51:39,055 Label is ['pool="12hrreg"']
+2023-06-23 10:51:39,056 Label is ['pool="regression"']
+2023-06-23 10:51:39,056 Label is ['pool="magnareg"']
+2023-06-23 10:51:39,056 Collecting metrics for memory_usage
+2023-06-23 10:51:39,057 Found CSV in Options
+2023-06-23 10:51:39,057 Collecting metrics for disk_usage
+2023-06-23 10:51:39,058 Found CSV in Options
+2023-06-23 10:51:39,058 Collecting metrics for cpu_load_avg_5mins
+2023-06-23 10:51:39,058 Found CSV in Options
+2023-06-23 10:51:39,059 Collecting metrics for vm_health_ssh_status
+2023-06-23 10:51:39,059 Found CSV in Options
+2023-06-23 10:51:39,061 172.16.238.13 - - [23/Jun/2023 10:51:39] "GET /metrics HTTP/1.1" 200 -
+2023-06-23 10:52:39,002 --Test--
+2023-06-23 10:52:39,004 ----Details Started----
+2023-06-23 10:52:39,004 static_vms
+2023-06-23 10:52:39,005 {'host': 'localhost', 'username': 'Administrator', 'password': 'password'}
+2023-06-23 10:52:39,006 ----Details Ended----
+2023-06-23 10:52:39,007 --Connecting to Below Cluster with Hard Coded---
+2023-06-23 10:52:39,079 --Bucket Set---
+2023-06-23 10:52:39,093 --Query Set---
+2023-06-23 10:52:39,098 Found row: {'pool': 'regression'}
+2023-06-23 10:52:39,099 Found row: {'pool': 'regression'}
+2023-06-23 10:52:39,099 Found row: {'pool': 'magnareg'}
+2023-06-23 10:52:39,100 Found row: {'pool': '12hrreg'}
+2023-06-23 10:52:39,100 Found row: {'pool': '12hrreg'}
+2023-06-23 10:52:39,100 Found row: {'pool': '12hrreg'}
+2023-06-23 10:52:39,101 Found row: {'pool': '12hrreg'}
+2023-06-23 10:52:39,101 Found row: {'pool': '12hrreg'}
+2023-06-23 10:52:39,101 Found row: {'pool': 'magnareg'}
+2023-06-23 10:52:39,102 Found row: {'pool': 'magnareg'}
+2023-06-23 10:52:39,102 Connected to localhost
+2023-06-23 10:52:39,102 Collecting metrics for available_vms
+2023-06-23 10:52:39,103 Found Cluster in Options
+2023-06-23 10:52:39,103 Cluster Name static_vms
+2023-06-23 10:52:39,103 Query Name SELECT poolId as `pool`, COUNT(*) AS count FROM (SELECT poolId FROM `tarun`.`my_scope`.`collection1` WHERE IS_ARRAY(poolId)=FALSE and state='available' UNION ALL SELECT poolId FROM `tarun`.`my_scope`.`collection1` UNNEST poolId where `collection1`.state = 'available'  ) AS pools group by poolId
+2023-06-23 10:52:39,109 Label is ['pool="regression"']
+2023-06-23 10:52:39,110 Label is ['pool="magnareg"']
+2023-06-23 10:52:39,110 Label is ['pool="12hrreg"']
+2023-06-23 10:52:39,110 Collecting metrics for memory_usage
+2023-06-23 10:52:39,110 Found CSV in Options
+2023-06-23 10:52:39,111 Collecting metrics for disk_usage
+2023-06-23 10:52:39,111 Found CSV in Options
+2023-06-23 10:52:39,111 Collecting metrics for cpu_load_avg_5mins
+2023-06-23 10:52:39,111 Found CSV in Options
+2023-06-23 10:52:39,112 Collecting metrics for vm_health_ssh_status
+2023-06-23 10:52:39,112 Found CSV in Options
+2023-06-23 10:52:39,113 172.16.238.13 - - [23/Jun/2023 10:52:39] "GET /metrics HTTP/1.1" 200 -
+2023-06-23 10:53:38,999 --Test--
+2023-06-23 10:53:38,999 ----Details Started----
+2023-06-23 10:53:39,000 static_vms
+2023-06-23 10:53:39,000 {'host': 'localhost', 'username': 'Administrator', 'password': 'password'}
+2023-06-23 10:53:39,000 ----Details Ended----
+2023-06-23 10:53:39,001 --Connecting to Below Cluster with Hard Coded---
+2023-06-23 10:53:39,044 --Bucket Set---
+2023-06-23 10:53:39,047 --Query Set---
+2023-06-23 10:53:39,053 Found row: {'pool': 'regression'}
+2023-06-23 10:53:39,053 Found row: {'pool': 'regression'}
+2023-06-23 10:53:39,053 Found row: {'pool': 'magnareg'}
+2023-06-23 10:53:39,054 Found row: {'pool': '12hrreg'}
+2023-06-23 10:53:39,054 Found row: {'pool': '12hrreg'}
+2023-06-23 10:53:39,055 Found row: {'pool': '12hrreg'}
+2023-06-23 10:53:39,055 Found row: {'pool': '12hrreg'}
+2023-06-23 10:53:39,055 Found row: {'pool': '12hrreg'}
+2023-06-23 10:53:39,056 Found row: {'pool': 'magnareg'}
+2023-06-23 10:53:39,056 Found row: {'pool': 'magnareg'}
+2023-06-23 10:53:39,057 Connected to localhost
+2023-06-23 10:53:39,057 Collecting metrics for available_vms
+2023-06-23 10:53:39,057 Found Cluster in Options
+2023-06-23 10:53:39,058 Cluster Name static_vms
+2023-06-23 10:53:39,058 Query Name SELECT poolId as `pool`, COUNT(*) AS count FROM (SELECT poolId FROM `tarun`.`my_scope`.`collection1` WHERE IS_ARRAY(poolId)=FALSE and state='available' UNION ALL SELECT poolId FROM `tarun`.`my_scope`.`collection1` UNNEST poolId where `collection1`.state = 'available'  ) AS pools group by poolId
+2023-06-23 10:53:39,065 Label is ['pool="12hrreg"']
+2023-06-23 10:53:39,065 Label is ['pool="regression"']
+2023-06-23 10:53:39,065 Label is ['pool="magnareg"']
+2023-06-23 10:53:39,066 Collecting metrics for memory_usage
+2023-06-23 10:53:39,066 Found CSV in Options
+2023-06-23 10:53:39,066 Collecting metrics for disk_usage
+2023-06-23 10:53:39,066 Found CSV in Options
+2023-06-23 10:53:39,067 Collecting metrics for cpu_load_avg_5mins
+2023-06-23 10:53:39,067 Found CSV in Options
+2023-06-23 10:53:39,067 Collecting metrics for vm_health_ssh_status
+2023-06-23 10:53:39,068 Found CSV in Options
+2023-06-23 10:53:39,069 172.16.238.13 - - [23/Jun/2023 10:53:39] "GET /metrics HTTP/1.1" 200 -
+2023-06-23 10:54:38,999 --Test--
+2023-06-23 10:54:38,999 ----Details Started----
+2023-06-23 10:54:39,000 static_vms
+2023-06-23 10:54:39,000 {'host': 'localhost', 'username': 'Administrator', 'password': 'password'}
+2023-06-23 10:54:39,000 ----Details Ended----
+2023-06-23 10:54:39,001 --Connecting to Below Cluster with Hard Coded---
+2023-06-23 10:54:39,037 --Bucket Set---
+2023-06-23 10:54:39,038 --Query Set---
+2023-06-23 10:54:39,043 Found row: {'pool': 'regression'}
+2023-06-23 10:54:39,043 Found row: {'pool': 'regression'}
+2023-06-23 10:54:39,043 Found row: {'pool': 'magnareg'}
+2023-06-23 10:54:39,044 Found row: {'pool': '12hrreg'}
+2023-06-23 10:54:39,044 Found row: {'pool': '12hrreg'}
+2023-06-23 10:54:39,044 Found row: {'pool': '12hrreg'}
+2023-06-23 10:54:39,044 Found row: {'pool': '12hrreg'}
+2023-06-23 10:54:39,045 Found row: {'pool': '12hrreg'}
+2023-06-23 10:54:39,045 Found row: {'pool': 'magnareg'}
+2023-06-23 10:54:39,045 Found row: {'pool': 'magnareg'}
+2023-06-23 10:54:39,045 Connected to localhost
+2023-06-23 10:54:39,045 Collecting metrics for available_vms
+2023-06-23 10:54:39,046 Found Cluster in Options
+2023-06-23 10:54:39,046 Cluster Name static_vms
+2023-06-23 10:54:39,046 Query Name SELECT poolId as `pool`, COUNT(*) AS count FROM (SELECT poolId FROM `tarun`.`my_scope`.`collection1` WHERE IS_ARRAY(poolId)=FALSE and state='available' UNION ALL SELECT poolId FROM `tarun`.`my_scope`.`collection1` UNNEST poolId where `collection1`.state = 'available'  ) AS pools group by poolId
+2023-06-23 10:54:39,051 Label is ['pool="12hrreg"']
+2023-06-23 10:54:39,052 Label is ['pool="regression"']
+2023-06-23 10:54:39,052 Label is ['pool="magnareg"']
+2023-06-23 10:54:39,052 Collecting metrics for memory_usage
+2023-06-23 10:54:39,053 Found CSV in Options
+2023-06-23 10:54:39,053 Collecting metrics for disk_usage
+2023-06-23 10:54:39,053 Found CSV in Options
+2023-06-23 10:54:39,054 Collecting metrics for cpu_load_avg_5mins
+2023-06-23 10:54:39,054 Found CSV in Options
+2023-06-23 10:54:39,054 Collecting metrics for vm_health_ssh_status
+2023-06-23 10:54:39,054 Found CSV in Options
+2023-06-23 10:54:39,056 172.16.238.13 - - [23/Jun/2023 10:54:39] "GET /metrics HTTP/1.1" 200 -
+2023-06-23 10:55:38,999 --Test--
+2023-06-23 10:55:39,000 ----Details Started----
+2023-06-23 10:55:39,000 static_vms
+2023-06-23 10:55:39,000 {'host': 'localhost', 'username': 'Administrator', 'password': 'password'}
+2023-06-23 10:55:39,001 ----Details Ended----
+2023-06-23 10:55:39,001 --Connecting to Below Cluster with Hard Coded---
+2023-06-23 10:55:39,047 --Bucket Set---
+2023-06-23 10:55:39,049 --Query Set---
+2023-06-23 10:55:39,056 Found row: {'pool': 'regression'}
+2023-06-23 10:55:39,057 Found row: {'pool': 'regression'}
+2023-06-23 10:55:39,058 Found row: {'pool': 'magnareg'}
+2023-06-23 10:55:39,059 Found row: {'pool': '12hrreg'}
+2023-06-23 10:55:39,060 Found row: {'pool': '12hrreg'}
+2023-06-23 10:55:39,060 Found row: {'pool': '12hrreg'}
+2023-06-23 10:55:39,061 Found row: {'pool': '12hrreg'}
+2023-06-23 10:55:39,062 Found row: {'pool': '12hrreg'}
+2023-06-23 10:55:39,062 Found row: {'pool': 'magnareg'}
+2023-06-23 10:55:39,063 Found row: {'pool': 'magnareg'}
+2023-06-23 10:55:39,063 Connected to localhost
+2023-06-23 10:55:39,065 Collecting metrics for available_vms
+2023-06-23 10:55:39,065 Found Cluster in Options
+2023-06-23 10:55:39,066 Cluster Name static_vms
+2023-06-23 10:55:39,069 Query Name SELECT poolId as `pool`, COUNT(*) AS count FROM (SELECT poolId FROM `tarun`.`my_scope`.`collection1` WHERE IS_ARRAY(poolId)=FALSE and state='available' UNION ALL SELECT poolId FROM `tarun`.`my_scope`.`collection1` UNNEST poolId where `collection1`.state = 'available'  ) AS pools group by poolId
+2023-06-23 10:55:39,076 Label is ['pool="regression"']
+2023-06-23 10:55:39,076 Label is ['pool="magnareg"']
+2023-06-23 10:55:39,076 Label is ['pool="12hrreg"']
+2023-06-23 10:55:39,077 Collecting metrics for memory_usage
+2023-06-23 10:55:39,077 Found CSV in Options
+2023-06-23 10:55:39,077 Collecting metrics for disk_usage
+2023-06-23 10:55:39,077 Found CSV in Options
+2023-06-23 10:55:39,078 Collecting metrics for cpu_load_avg_5mins
+2023-06-23 10:55:39,078 Found CSV in Options
+2023-06-23 10:55:39,078 Collecting metrics for vm_health_ssh_status
+2023-06-23 10:55:39,079 Found CSV in Options
+2023-06-23 10:55:39,080 172.16.238.13 - - [23/Jun/2023 10:55:39] "GET /metrics HTTP/1.1" 200 -
+2023-06-23 10:56:39,000 --Test--
+2023-06-23 10:56:39,000 ----Details Started----
+2023-06-23 10:56:39,000 static_vms
+2023-06-23 10:56:39,001 {'host': 'localhost', 'username': 'Administrator', 'password': 'password'}
+2023-06-23 10:56:39,001 ----Details Ended----
+2023-06-23 10:56:39,002 --Connecting to Below Cluster with Hard Coded---
+2023-06-23 10:56:39,066 --Bucket Set---
+2023-06-23 10:56:39,068 --Query Set---
+2023-06-23 10:56:39,072 Found row: {'pool': 'regression'}
+2023-06-23 10:56:39,072 Found row: {'pool': 'regression'}
+2023-06-23 10:56:39,072 Found row: {'pool': 'magnareg'}
+2023-06-23 10:56:39,073 Found row: {'pool': '12hrreg'}
+2023-06-23 10:56:39,073 Found row: {'pool': '12hrreg'}
+2023-06-23 10:56:39,073 Found row: {'pool': '12hrreg'}
+2023-06-23 10:56:39,073 Found row: {'pool': '12hrreg'}
+2023-06-23 10:56:39,074 Found row: {'pool': '12hrreg'}
+2023-06-23 10:56:39,074 Found row: {'pool': 'magnareg'}
+2023-06-23 10:56:39,074 Found row: {'pool': 'magnareg'}
+2023-06-23 10:56:39,074 Connected to localhost
+2023-06-23 10:56:39,074 Collecting metrics for available_vms
+2023-06-23 10:56:39,075 Found Cluster in Options
+2023-06-23 10:56:39,075 Cluster Name static_vms
+2023-06-23 10:56:39,075 Query Name SELECT poolId as `pool`, COUNT(*) AS count FROM (SELECT poolId FROM `tarun`.`my_scope`.`collection1` WHERE IS_ARRAY(poolId)=FALSE and state='available' UNION ALL SELECT poolId FROM `tarun`.`my_scope`.`collection1` UNNEST poolId where `collection1`.state = 'available'  ) AS pools group by poolId
+2023-06-23 10:56:39,080 Label is ['pool="regression"']
+2023-06-23 10:56:39,080 Label is ['pool="magnareg"']
+2023-06-23 10:56:39,080 Label is ['pool="12hrreg"']
+2023-06-23 10:56:39,080 Collecting metrics for memory_usage
+2023-06-23 10:56:39,081 Found CSV in Options
+2023-06-23 10:56:39,081 Collecting metrics for disk_usage
+2023-06-23 10:56:39,081 Found CSV in Options
+2023-06-23 10:56:39,082 Collecting metrics for cpu_load_avg_5mins
+2023-06-23 10:56:39,082 Found CSV in Options
+2023-06-23 10:56:39,082 Collecting metrics for vm_health_ssh_status
+2023-06-23 10:56:39,083 Found CSV in Options
+2023-06-23 10:56:39,086 172.16.238.13 - - [23/Jun/2023 10:56:39] "GET /metrics HTTP/1.1" 200 -
+2023-06-23 10:57:38,999 --Test--
+2023-06-23 10:57:38,999 ----Details Started----
+2023-06-23 10:57:39,000 static_vms
+2023-06-23 10:57:39,000 {'host': 'localhost', 'username': 'Administrator', 'password': 'password'}
+2023-06-23 10:57:39,000 ----Details Ended----
+2023-06-23 10:57:39,001 --Connecting to Below Cluster with Hard Coded---
+2023-06-23 10:57:39,067 --Bucket Set---
+2023-06-23 10:57:39,069 --Query Set---
+2023-06-23 10:57:39,074 Found row: {'pool': 'regression'}
+2023-06-23 10:57:39,075 Found row: {'pool': 'regression'}
+2023-06-23 10:57:39,075 Found row: {'pool': 'magnareg'}
+2023-06-23 10:57:39,075 Found row: {'pool': '12hrreg'}
+2023-06-23 10:57:39,076 Found row: {'pool': '12hrreg'}
+2023-06-23 10:57:39,076 Found row: {'pool': '12hrreg'}
+2023-06-23 10:57:39,076 Found row: {'pool': '12hrreg'}
+2023-06-23 10:57:39,077 Found row: {'pool': '12hrreg'}
+2023-06-23 10:57:39,077 Found row: {'pool': 'magnareg'}
+2023-06-23 10:57:39,077 Found row: {'pool': 'magnareg'}
+2023-06-23 10:57:39,077 Connected to localhost
+2023-06-23 10:57:39,078 Collecting metrics for available_vms
+2023-06-23 10:57:39,078 Found Cluster in Options
+2023-06-23 10:57:39,078 Cluster Name static_vms
+2023-06-23 10:57:39,079 Query Name SELECT poolId as `pool`, COUNT(*) AS count FROM (SELECT poolId FROM `tarun`.`my_scope`.`collection1` WHERE IS_ARRAY(poolId)=FALSE and state='available' UNION ALL SELECT poolId FROM `tarun`.`my_scope`.`collection1` UNNEST poolId where `collection1`.state = 'available'  ) AS pools group by poolId
+2023-06-23 10:57:39,083 Label is ['pool="12hrreg"']
+2023-06-23 10:57:39,083 Label is ['pool="regression"']
+2023-06-23 10:57:39,083 Label is ['pool="magnareg"']
+2023-06-23 10:57:39,084 Collecting metrics for memory_usage
+2023-06-23 10:57:39,084 Found CSV in Options
+2023-06-23 10:57:39,084 Collecting metrics for disk_usage
+2023-06-23 10:57:39,084 Found CSV in Options
+2023-06-23 10:57:39,085 Collecting metrics for cpu_load_avg_5mins
+2023-06-23 10:57:39,085 Found CSV in Options
+2023-06-23 10:57:39,085 Collecting metrics for vm_health_ssh_status
+2023-06-23 10:57:39,085 Found CSV in Options
+2023-06-23 10:57:39,087 172.16.238.13 - - [23/Jun/2023 10:57:39] "GET /metrics HTTP/1.1" 200 -
+2023-06-23 10:58:39,000 --Test--
+2023-06-23 10:58:39,000 ----Details Started----
+2023-06-23 10:58:39,001 static_vms
+2023-06-23 10:58:39,001 {'host': 'localhost', 'username': 'Administrator', 'password': 'password'}
+2023-06-23 10:58:39,001 ----Details Ended----
+2023-06-23 10:58:39,002 --Connecting to Below Cluster with Hard Coded---
+2023-06-23 10:58:39,050 --Bucket Set---
+2023-06-23 10:58:39,053 --Query Set---
+2023-06-23 10:58:39,059 Found row: {'pool': 'regression'}
+2023-06-23 10:58:39,059 Found row: {'pool': 'regression'}
+2023-06-23 10:58:39,060 Found row: {'pool': 'magnareg'}
+2023-06-23 10:58:39,060 Found row: {'pool': '12hrreg'}
+2023-06-23 10:58:39,060 Found row: {'pool': '12hrreg'}
+2023-06-23 10:58:39,061 Found row: {'pool': '12hrreg'}
+2023-06-23 10:58:39,061 Found row: {'pool': '12hrreg'}
+2023-06-23 10:58:39,062 Found row: {'pool': '12hrreg'}
+2023-06-23 10:58:39,062 Found row: {'pool': 'magnareg'}
+2023-06-23 10:58:39,062 Found row: {'pool': 'magnareg'}
+2023-06-23 10:58:39,063 Connected to localhost
+2023-06-23 10:58:39,063 Collecting metrics for available_vms
+2023-06-23 10:58:39,064 Found Cluster in Options
+2023-06-23 10:58:39,064 Cluster Name static_vms
+2023-06-23 10:58:39,064 Query Name SELECT poolId as `pool`, COUNT(*) AS count FROM (SELECT poolId FROM `tarun`.`my_scope`.`collection1` WHERE IS_ARRAY(poolId)=FALSE and state='available' UNION ALL SELECT poolId FROM `tarun`.`my_scope`.`collection1` UNNEST poolId where `collection1`.state = 'available'  ) AS pools group by poolId
+2023-06-23 10:58:39,072 Label is ['pool="regression"']
+2023-06-23 10:58:39,072 Label is ['pool="magnareg"']
+2023-06-23 10:58:39,073 Label is ['pool="12hrreg"']
+2023-06-23 10:58:39,073 Collecting metrics for memory_usage
+2023-06-23 10:58:39,073 Found CSV in Options
+2023-06-23 10:58:39,074 Collecting metrics for disk_usage
+2023-06-23 10:58:39,074 Found CSV in Options
+2023-06-23 10:58:39,075 Collecting metrics for cpu_load_avg_5mins
+2023-06-23 10:58:39,075 Found CSV in Options
+2023-06-23 10:58:39,076 Collecting metrics for vm_health_ssh_status
+2023-06-23 10:58:39,076 Found CSV in Options
+2023-06-23 10:58:39,078 172.16.238.13 - - [23/Jun/2023 10:58:39] "GET /metrics HTTP/1.1" 200 -

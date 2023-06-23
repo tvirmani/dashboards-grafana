@@ -1,0 +1,56 @@
+{
+  "clusters": {
+    "static_vms": {
+      "host": "&lt;ip-address&gt;",
+      "username": "Administrator",
+      "password": "xxxx"
+    },
+    ...
+  },
+  "queries": [
+    {
+      "name": "available_vms",
+      "cluster": "static_vms",
+      "query": "SELECT poolId as `pool`, COUNT(*) AS count FROM (SELECT poolId FROM `QE-server-pool` WHERE IS_ARRAY(poolId)=FALSE and state='available' UNION ALL SELECT poolId FROM `QE-server-pool` UNNEST poolId where `QE-server-pool`.state = 'available'  ) AS pools group by poolId",
+      "description": "Available VMs for each server pool",
+      "value_key": "count",
+      "labels": ["pool"]
+    },
+    ...
+  ],
+  "csvs": {
+    "vm_health": "http://&lt;jenkins-host-job-url&gt;/lastSuccessfulBuild/artifact/vm_health_info.csv/",
+   ...
+  },
+  "columns": [
+    {
+      "name": "memory_usage",
+      "csv": "vm_health",
+      "description": "Memory usage",
+      "column": "memory_use(%)",
+      "labels": ["ipaddr"]
+    },
+    {
+      "name": "disk_usage",
+      "csv": "vm_health",
+      "description": "Disk usage",
+      "column": "disk_use%",
+      "labels": ["ipaddr"]
+    },
+    {
+      "name": "cpu_load_avg_5mins",
+      "csv": "vm_health",
+      "description": "CPU load average (5mins)",
+      "column": "cpu_load_avg_5mins",
+      "labels": ["ipaddr"]
+    },
+    {
+      "name": "vm_health_ssh_status",
+      "csv": "vm_health",
+      "description": "SSH Status",
+      "column": "ssh_status",
+      "labels": ["ipaddr", "ssh_error", "pool_state", "couchbase_version", "pool_ids"]
+    },
+    ...
+  ]
+}

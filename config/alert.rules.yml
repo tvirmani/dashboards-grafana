@@ -1,0 +1,11 @@
+groups:
+- name: alert.rules
+  rules:
+  - alert: HighCPU
+    expr: sum(rate(container_cpu_usage_seconds_total{image!=""}[1m])) by (pod_name)>1.50
+    for: 1m
+    labels:
+      severity: "critical"
+    annotations:
+      summary: "High CPU Usage for More Than 1 Minute"
+      description: "HIGH CPU USAGE"

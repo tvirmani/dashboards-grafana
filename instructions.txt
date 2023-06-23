@@ -1,0 +1,9 @@
+Install Curl on Prometheus
+
+wget https://github.com/moparisthebest/static-curl/releases/download/v7.80.0/curl-amd64
+chmod +x ./curl-amd64
+./curl-amd64 -X POST --insecure https://ptsv2.com/t/57y8r-1640280329/post
+
+have to create newfile.log in article folder to map log file to host container from docker 
+
+Grafana Dashboard : 193,13946

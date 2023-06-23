@@ -1,0 +1,5 @@
+couchbase==3.0.7
+Flask==2.2.2
+requests==2.24.0
+pandas
+flask_cors

@@ -1,0 +1,180 @@
+version: "2"
+services:
+
+ couchbase-server:
+   build: ./couchbase-server
+   ports:
+    - 8091-8096:8091-8096
+    - 11210:11210
+   environment:  
+     - CLUSTER_NAME=couchbase-demo
+     - COUCHBASE_ADMINISTRATOR_USERNAME=Administrator
+     - COUCHBASE_ADMINISTRATOR_PASSWORD=password
+     - COUCHBASE_BUCKET=tarun
+     - COUCHBASE_BUCKET_RAMSIZE=512
+     - COUCHBASE_RBAC_USERNAME=admin
+     - COUCHBASE_RBAC_PASSWORD=password
+     - COUCHBASE_RBAC_NAME=admin
+     - COUCHBASE_RAM_SIZE=2048
+     - COUCHBASE_INDEX_RAM_SIZE=512
+   hostname: couchbase-server
+   container_name: couchbase-server
+   labels:
+     - "docker.group=HCBU"
+   working_dir: /opt/couchbase
+   stdin_open: true
+   tty: true      
+   networks:
+     example-network:
+       ipv4_address: 172.16.238.16
+   entrypoint: [""]
+   command: sh -c "/opt/couchbase/init/init-cbserver.sh"
+ 
+ dashboard:
+   restart: unless-stopped
+   container_name: dashboard
+   image: dashboard
+   labels:
+      - "docker.group=HCBU"
+   build: ./dashboard
+   ports:
+     - 5000:5000
+   environment:
+     - GRAFANA_HOST=http://admin:admin@grafana:3000
+   networks:
+      example-network:
+        ipv4_address: 172.16.238.10
+ grafana:
+   image: grafana/grafana:8.0.1
+   container_name: grafana
+   hostname: grafana
+   restart: unless-stopped
+   labels:
+     - "docker.group=HCBU"
+   volumes:
+     - ./config/grafana:/var/lib/grafana
+   environment:
+     GF_INSTALL_PLUGINS: "simpod-json-datasource,marcusolsson-csv-datasource,ae3e-plotly-panel,camptocamp-prometheus-alertmanager-datasource"
+     GF_AUTH_ANONYMOUS_ENABLED: "true"
+     GF_PLUGINS_ALLOW_LOADING_UNSIGNED_PLUGINS: "ae3e-plotly-panel"
+     GF_RENDERING_SERVER_URL: http://renderer:8081/render
+     GF_RENDERING_CALLBACK_URL: http://grafana:3000/
+   ports:
+     - 4000:3000
+   networks:
+      example-network:
+        ipv4_address: 172.16.238.11
+ renderer:
+   image: grafana/grafana-image-renderer:latest
+   networks:
+      example-network:
+        ipv4_address: 172.16.238.12
+ node-exporter:
+   image: prom/node-exporter:latest
+   container_name: node-exporter
+   ports:
+     - 9100:9100
+   restart: unless-stopped
+   volumes:
+     - /proc:/host/proc:ro
+     - /sys:/host/sys:ro
+     - /:/rootfs:ro
+   command:
+     - '--path.procfs=/host/proc'
+     - '--path.rootfs=/rootfs'
+     - '--path.sysfs=/host/sys'
+     - '--collector.filesystem.mount-points-exclude=^/(sys|proc|dev|host|etc)($$|/)'
+   networks:
+      example-network:
+        ipv4_address: 172.16.238.28
+     
+ cadvisor:
+   image: gcr.io/cadvisor/cadvisor:latest
+   container_name: cadvisor
+   ports:
+     - 8080:8080
+   volumes:
+     - /:/rootfs:ro
+     - /var/run:/var/run:rw
+     - /sys:/sys:ro
+     - /var/lib/docker/:/var/lib/docker:ro
+   networks:
+      example-network:
+        ipv4_address: 172.16.238.26
+ redis:
+   image: redis:latest
+   container_name: redis
+   ports:
+     - 6379:6379
+   networks:
+      example-network:
+        ipv4_address: 172.16.238.27
+ 
+ fakesmtp:
+   image: reachfive/fake-smtp-server
+   container_name: fakesmtp
+   ports:
+     - 1080:1080
+   networks:
+      example-network:
+        ipv4_address: 172.16.238.37
+ 
+ 
+ prometheus:
+   restart: unless-stopped
+   image: prom/prometheus
+   labels:
+     - "docker.group=HCBU"
+   environment:
+     MINIO_PROMETHEUS_AUTH_TYPE: public
+     MINIO_PROMETHEUS_JOB_ID: minio-job
+   container_name: prometheus
+   ports:
+     - 9090:9090
+   hostname: prometheus
+   volumes:
+     - ./config/prometheus.yml:/etc/prometheus/prometheus.yml
+     - ./config/alert.rules.yml:/etc/prometheus/alert.rules.yml
+   command:
+     - '--config.file=/etc/prometheus/prometheus.yml'
+   networks:
+     example-network:
+       ipv4_address: 172.16.238.13
+        
+ exporter:
+   restart: unless-stopped
+   container_name: exporter
+   hostname: exporter
+   build: ./exporter
+   ports:
+    - 5005:5005
+   volumes:
+     - ./config/queries.json:/app/queries.json
+     - ./config/newfile.log:/code/newfile.log
+   networks:
+     example-network:
+       ipv4_address: 172.16.238.14
+
+ alertmanager:
+   restart: unless-stopped
+   container_name: alertmanager
+   hostname: alertmanager
+   image: prom/alertmanager
+   ports:
+     - 9093:9093
+   volumes:
+     - ./config/alertmanager.yml:/etc/alertmanager/alertmanager.yml
+     - ./config/alert_templates:/etc/alertmanager/templates
+   networks:
+     example-network:
+       ipv4_address: 172.16.238.15
+        
+       
+networks:
+  example-network:
+    name: example-network
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.16.238.0/24

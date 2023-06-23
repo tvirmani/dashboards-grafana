@@ -1,0 +1,80 @@
+[
+    {
+        "poolId": "12hrreg",
+        "state": "available",
+        "os": "windows",
+        "projectId": "8b37f8e2-f8f7-4fe0-bb6d-58bbfde62841",
+        "isComplete": false
+    },
+    {
+        "poolId": "12hrreg",
+        "state": "available",
+        "os": "unix",
+        "projectId": "ac47300c-6113-4f53-a58f-20f2a0ef9264",
+        "isComplete": false
+    },
+	{
+        "poolId": "12hrreg",
+        "state": "available",
+        "os": "windows",
+        "projectId": "ac47300c-6132-4f53-a58f-20f2a0ef9264",
+        "isComplete": false
+    },
+    {
+        "poolId": "12hrreg",
+        "state": "available",
+        "os": "windows",
+        "projectId": "ac45300c-6132-4f53-a58f-20f2a0ef9264",
+        "isComplete": false
+    },
+    {
+        "poolId": "12hrreg",
+        "state": "available",
+        "os": "windows",
+        "projectId": "ac45300c-6132-4f53-a58f-10f2a0ef9264",
+        "isComplete": false
+    },
+    {
+        "poolId": "regression",
+        "state": "available",
+        "os": "windows",
+        "projectId": "5fc6da44-a8ac-46df-8ef9-687fc876e51d",
+        "isComplete": false
+    },
+    {
+        "poolId": "regression",
+        "state": "available",
+        "os": "unix",
+        "projectId": "4edc6885-c7ff-4fa6-a260-868669ce4913",
+        "isComplete": false
+    },
+    {
+        "poolId": "magnareg",
+        "state": "available",
+        "os": "windows",
+        "projectId": "68d65a94-4c05-4a63-ae93-46b2c8c0f621",
+        "isComplete": false
+    },
+    {
+        "poolId": "magnareg",
+        "state": "available",
+        "os": "unix",
+        "projectId": "e85a6146-9d67-44a4-a979-abd3801982cf",
+        "isComplete": false
+    },
+	    {
+        "poolId": "magnareg",
+        "state": "available",
+        "os": "unix",
+        "projectId": "e85a6146-9d87-44a4-a979-abd3801982cf",
+        "isComplete": false
+    },
+	    {
+        "poolId": "magnareg",
+        "state": "available",
+        "os": "aix",
+        "projectId": "e85a6146-9d67-44a4-a979-abd3801982cf",
+        "isComplete": false
+    }
+
+]

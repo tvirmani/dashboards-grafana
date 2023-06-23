@@ -1,0 +1,10 @@
+2023-06-14 23:20:57,727 Registered metrics collection for available_vms
+2023-06-14 23:20:57,727 Registered metrics collection for memory_usage
+2023-06-14 23:20:57,727 Registered metrics collection for disk_usage
+2023-06-14 23:20:57,727 Registered metrics collection for cpu_load_avg_5mins
+2023-06-14 23:20:57,727 Registered metrics collection for vm_health_ssh_status
+2023-06-14 23:20:57,727  * Debugger is active!
+22023-06-14 23:23:13,136  * Restarting with stat
+08
+2023-06-14 23:20:58,612  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2023-06-14 23:23:13,053  * Detected change in 'F:\\article\\exporter\\code\\exporter.py', reloading

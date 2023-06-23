@@ -1,0 +1,71 @@
+2023-06-14 18:24:47,018 Registered metrics collection for available_vms
+2023-06-14 18:24:47,019 Registered metrics collection for memory_usage
+2023-06-14 18:24:47,019 Registered metrics collection for disk_usage
+2023-06-14 18:24:47,019 Registered metrics collection for cpu_load_avg_5mins
+2023-06-14 18:24:47,020 Registered metrics collection for vm_health_ssh_status
+2023-06-14 18:24:47,028  * Debugger is active!
+2023-06-14 18:24:47,029  * Debugger PIN: 719-719-487
+2023-06-14 18:25:03,916 --Test--
+2023-06-14 18:25:03,916 ----Details Started----
+2023-06-14 18:25:03,916 static_vms
+2023-06-14 18:25:03,917 {'host': 'localhost', 'username': 'Administrator', 'password': 'password'}
+2023-06-14 18:25:03,917 ----Details Ended----
+2023-06-14 18:25:03,917 --Connecting to Below Cluster with Hard Coded---
+2023-06-14 18:25:03,950 Collecting metrics for available_vms
+2023-06-14 18:25:03,950 Found Cluster in Options
+2023-06-14 18:25:03,951 Cluster Name static_vms
+2023-06-14 18:25:03,951 Query Name SELECT poolId as `pool`, COUNT(*) AS count FROM (SELECT poolId FROM `tarun`.`my_scope`.`collection1` WHERE IS_ARRAY(poolId)=FALSE and state='available' UNION ALL SELECT poolId FROM `tarun`.`my_scope`.`collection1` UNNEST poolId where `collection1`.state = 'available'  ) AS pools group by poolId
+2023-06-14 18:25:03,952 Error while collecting available_vms: ServiceUnavailableException(<ec=4, category=couchbase.common, message=service_not_available (4), context=QueryErrorContext({'retry_attempts': 0, 'client_context_id': '', 'method': '', 'path': '', 'http_status': 0, 'http_body': '', 'first_error_code': 0, 'first_error_message': '', 'statement': "SELECT poolId as `pool`, COUNT(*) AS count FROM (SELECT poolId FROM `tarun`.`my_scope`.`collection1` WHERE IS_ARRAY(poolId)=FALSE and state='available' UNION ALL SELECT poolId FROM `tarun`.`my_scope`.`collection1` UNNEST poolId where `collection1`.state = 'available'  ) AS pools group by poolId", 'parameters': '', 'context_type': 'QueryErrorContext'}), C Source=/home/ec2-user/workspace/python/sdk/python-manylinux-wheel-pipeline/couchbase-python-client/src/n1ql.cxx:297>)
+2023-06-14 18:25:03,952 Collecting metrics for memory_usage
+2023-06-14 18:25:03,953 Found CSV in Options
+2023-06-14 18:25:03,953 Collecting metrics for disk_usage
+2023-06-14 18:25:03,953 Found CSV in Options
+2023-06-14 18:25:03,953 Collecting metrics for cpu_load_avg_5mins
+2023-06-14 18:25:03,954 Found CSV in Options
+2023-06-14 18:25:03,954 Collecting metrics for vm_health_ssh_status
+2023-06-14 18:25:03,954 Found CSV in Options
+2023-06-14 18:25:03,957 172.16.238.13 - - [14/Jun/2023 18:25:03] "GET /metrics HTTP/1.1" 200 -
+2023-06-14 18:25:26,120 --Test--
+2023-06-14 18:25:26,121 ----Details Started----
+2023-06-14 18:25:26,121 static_vms
+2023-06-14 18:25:26,121 {'host': 'localhost', 'username': 'Administrator', 'password': 'password'}
+2023-06-14 18:25:26,122 ----Details Ended----
+2023-06-14 18:25:26,122 --Connecting to Below Cluster with Hard Coded---
+2023-06-14 18:25:26,163 Collecting metrics for available_vms
+2023-06-14 18:25:26,163 Found Cluster in Options
+2023-06-14 18:25:26,164 Cluster Name static_vms
+2023-06-14 18:25:26,164 Query Name SELECT poolId as `pool`, COUNT(*) AS count FROM (SELECT poolId FROM `tarun`.`my_scope`.`collection1` WHERE IS_ARRAY(poolId)=FALSE and state='available' UNION ALL SELECT poolId FROM `tarun`.`my_scope`.`collection1` UNNEST poolId where `collection1`.state = 'available'  ) AS pools group by poolId
+2023-06-14 18:25:26,176 Label is ['pool="regression"']
+2023-06-14 18:25:26,176 Label is ['pool="magnareg"']
+2023-06-14 18:25:26,177 Label is ['pool="12hrreg"']
+2023-06-14 18:25:26,177 Collecting metrics for memory_usage
+2023-06-14 18:25:26,177 Found CSV in Options
+2023-06-14 18:25:26,177 Collecting metrics for disk_usage
+2023-06-14 18:25:26,178 Found CSV in Options
+2023-06-14 18:25:26,178 Collecting metrics for cpu_load_avg_5mins
+2023-06-14 18:25:26,178 Found CSV in Options
+2023-06-14 18:25:26,178 Collecting metrics for vm_health_ssh_status
+2023-06-14 18:25:26,178 Found CSV in Options
+2023-06-14 18:25:26,179 172.16.238.1 - - [14/Jun/2023 18:25:26] "GET /metrics HTTP/1.1" 200 -
+2023-06-14 18:26:03,918 --Test--
+2023-06-14 18:26:03,919 ----Details Started----
+2023-06-14 18:26:03,919 static_vms
+2023-06-14 18:26:03,920 {'host': 'localhost', 'username': 'Administrator', 'password': 'password'}
+2023-06-14 18:26:03,920 ----Details Ended----
+2023-06-14 18:26:03,920 --Connecting to Below Cluster with Hard Coded---
+2023-06-14 18:26:03,958 Collecting metrics for available_vms
+2023-06-14 18:26:03,959 Found Cluster in Options
+2023-06-14 18:26:03,960 Cluster Name static_vms
+2023-06-14 18:26:03,960 Query Name SELECT poolId as `pool`, COUNT(*) AS count FROM (SELECT poolId FROM `tarun`.`my_scope`.`collection1` WHERE IS_ARRAY(poolId)=FALSE and state='available' UNION ALL SELECT poolId FROM `tarun`.`my_scope`.`collection1` UNNEST poolId where `collection1`.state = 'available'  ) AS pools group by poolId
+2023-06-14 18:26:03,974 Label is ['pool="regression"']
+2023-06-14 18:26:03,975 Label is ['pool="magnareg"']
+2023-06-14 18:26:03,975 Label is ['pool="12hrreg"']
+2023-06-14 18:26:03,976 Collecting metrics for memory_usage
+2023-06-14 18:26:03,976 Found CSV in Options
+2023-06-14 18:26:03,977 Collecting metrics for disk_usage
+2023-06-14 18:26:03,977 Found CSV in Options
+2023-06-14 18:26:03,977 Collecting metrics for cpu_load_avg_5mins
+2023-06-14 18:26:03,978 Found CSV in Options
+2023-06-14 18:26:03,978 Collecting metrics for vm_health_ssh_status
+2023-06-14 18:26:03,979 Found CSV in Options
+2023-06-14 18:26:03,980 172.16.238.13 - - [14/Jun/2023 18:26:03] "GET /metrics HTTP/1.1" 200 -

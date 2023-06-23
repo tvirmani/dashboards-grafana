@@ -1,0 +1,3 @@
+when running local application : python dashboard.py - change datasource SimpleJSON to host.docker.internal:5000
+Dashboard Datasource when running from Docker images  172.16.238.10:5000
+

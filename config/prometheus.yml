@@ -1,0 +1,33 @@
+# Prometheus global config
+global:
+  scrape_interval: 1m # Set the scrape interval to every 15 seconds. Default is every 1 minute.
+  scrape_timeout: 30s
+# Alertmanager configuration
+rule_files:
+  - alert.rules.yml
+alerting:
+  alertmanagers:
+  - static_configs:
+    - targets:
+      - 'alertmanager:9093'
+
+scrape_configs:
+  - job_name: "prometheus"
+    static_configs:
+      - targets: ["localhost:9090"]
+  - job_name: "automation_exporter"
+    static_configs:
+      - targets: ["exporter:5005"]
+  - job_name: 'docker'
+         # metrics_path defaults to '/metrics'
+         # scheme defaults to 'http'.
+    static_configs:
+      - targets: ["host.docker.internal:9323"]
+  - job_name: cadvisor
+    scrape_interval: 5s
+    static_configs:
+    - targets:
+      - cadvisor:8080
+  - job_name: 'node'
+    static_configs:
+      - targets: ['node-exporter:9100']

@@ -1,0 +1,16 @@
+{"targets":[ {
+  "type" : "timeseries",
+  "source" : "json",
+  "name" : "Breakfast Nook 3 Piece Corner Dining Set, Black",
+  "salePrice" : 288.99
+}, {
+  "type" : "timeseries",
+  "source" : "csv",
+  "name" : "Breakfast Nook 3 Piece Corner Dining Set, Black",
+  "salePrice" : 288.99
+},{
+  "type" : "timeseries",
+  "source" : "couchbase",
+  "name" : "Castle Tent Loft Bed w/ Slide ; Under Bed Storage, Blue",
+  "salePrice" : 369.01
+}]}

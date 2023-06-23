@@ -1,0 +1,5 @@
+ipaddr,memory_use(%),disk_use%,cpu_load_avg_5mins,ssh_status,ssh_error,pool_state,couchbase_version,pool_ids
+vmhost1,43,12,54,0,,available,11.2.3,12hrreg
+vmhost2,44,13,55,0,,available,11.2.3,12hrreg
+vmhost3,23,14,56,1,Error:344,available,11.2.3,12hrreg
+vmhost4,10,90,57,0,,available,11.2.3,12hrreg

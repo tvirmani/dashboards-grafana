@@ -1,0 +1,1 @@
+SELECT os,count(*) FROM `tarun`.`my_scope`.`collection1` group by os

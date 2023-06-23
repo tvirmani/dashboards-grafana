@@ -1,0 +1,17 @@
+sum (rate (container_cpu_usage_seconds_total{image!=""}[1m])) by (pod_name)-1.50
+- alert: HostHighCpuLoad
+  expr: avg(irate(node_cpu_seconds_total{mode="idle"}[1m]) * 100) < 30
+  for: 1m
+  labels:
+    severity: warning
+  annotations:
+    summary: "High usage on {{ $labels.instance }}"
+    description: "{{ $labels.instance }} has a average CPU idle (current value: {{ $value }}s)"
+
+localhost:9093
+https://www.wpoven.com/tools/free-smtp-server-for-testing : SMTP Server
+promtool check rules alert.rules.yml (from prometheus)
+Copy the url in the Alertmanagers section
+http://localhost:9093/api/v1/alerts
+Test it using curl
+amtool check-config /etc/alertmanager/alertmanager.yml
