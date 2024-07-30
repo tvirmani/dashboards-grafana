@@ -5,5 +5,4 @@ metadata:
   namespace: ace-demo
 spec:
   targetNamespaces: 
-    -ace-demo
-  
+    -ace-demo  
