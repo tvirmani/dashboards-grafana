@@ -1,0 +1,8 @@
+apiVersion: operators.coreos.com/v1
+kind: OperatorGroup
+metadata:
+  name: app-connect-operator-group
+  namespace: ace-demo
+spec:
+  targetNamespaces: 
+  - ace-demo
